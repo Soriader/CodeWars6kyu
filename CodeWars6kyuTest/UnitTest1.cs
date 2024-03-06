@@ -8,6 +8,15 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void GenericTests()
+            {
+                Assert.AreEqual(3, FindEvenIndexTask.FindEvenIndex(new int[] { 1, 2, 3, 4, 3, 2, 1 }));
+                Assert.AreEqual(1, FindEvenIndexTask.FindEvenIndex(new int[] { 1, 100, 50, -51, 1, 1 }));
+                Assert.AreEqual(-1, FindEvenIndexTask.FindEvenIndex(new int[] { 1, 2, 3, 4, 5, 6 }));
+                Assert.AreEqual(3, FindEvenIndexTask.FindEvenIndex(new int[] { 20, 10, 30, 10, 10, 15, 35 }));
+            }
+
+            [Test]
             public void SampleTest()
             {
                 Assert.AreEqual("no one likes this", LikesTest.Likes(new string[0]));
