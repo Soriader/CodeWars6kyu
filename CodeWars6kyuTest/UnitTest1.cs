@@ -7,6 +7,14 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+
+            [Test]
+            public void BreakCamelCaseTest()
+            {
+                Assert.AreEqual("camel Casing", BreakCamelCaseTask.BreakCamelCase("camelCasing"));
+            }
+
+
             [Test]
             public void GenericTests()
             {
