@@ -8,6 +8,18 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void DuplicateCountTest()
+            {
+                Assert.AreEqual(0, DuplicateCountTask.DuplicateCount(""));
+                Assert.AreEqual(0, DuplicateCountTask.DuplicateCount("abcde"));
+                Assert.AreEqual(2, DuplicateCountTask.DuplicateCount("aabbcde"));
+                Assert.AreEqual(2, DuplicateCountTask.DuplicateCount("aabBcde"), "should ignore case");
+                Assert.AreEqual(1, DuplicateCountTask.DuplicateCount("Indivisibility"));
+                Assert.AreEqual(2, DuplicateCountTask.DuplicateCount("Indivisibilities"), "characters may not be adjacent");
+            }
+
+
+            [Test]
             public void AlphabetPositionTask()
             {
                 Assert.AreEqual("20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11", AlphabetPositionTest.AlphabetPosition("The sunset sets at twelve o' clock."));
