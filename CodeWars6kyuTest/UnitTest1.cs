@@ -7,6 +7,16 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+
+            [Test]
+            public void TakeATenMinutesWalkTask()
+            {
+                Assert.AreEqual(true, TakeATenMinutesWalkTest.IsValidWalk(new string[] { "n", "s", "n", "s", "n", "s", "n", "s", "n", "s" }), "should return true");
+                Assert.AreEqual(false, TakeATenMinutesWalkTest.IsValidWalk(new string[] { "w", "e", "w", "e", "w", "e", "w", "e", "w", "e", "w", "e" }), "should return false");
+                Assert.AreEqual(false, TakeATenMinutesWalkTest.IsValidWalk(new string[] { "w" }), "should return false");
+                Assert.AreEqual(false, TakeATenMinutesWalkTest.IsValidWalk(new string[] { "n", "n", "n", "s", "n", "s", "n", "s", "n", "s" }), "should return false");
+            }
+
             [Test]
             public void ConsecutiveStringsTest()
             {
