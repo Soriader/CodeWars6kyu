@@ -8,6 +8,15 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void ConsecutiveStringsTest()
+            {
+                Assert.AreEqual("abigailtheta", ConsecutiveStringsTask.LongestConsec(new String[] { "zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail" }, 2));
+                Assert.AreEqual("oocccffuucccjjjkkkjyyyeehh", ConsecutiveStringsTask.LongestConsec(new String[] { "ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh" }, 1));
+                Assert.AreEqual("", ConsecutiveStringsTask.LongestConsec(new String[] { }, 3));
+                Assert.AreEqual("ixoyx3452zzzzzzzzzzzz", ConsecutiveStringsTask.LongestConsec(new String[] { "it", "wkppv", "ixoyx", "3452", "zzzzzzzzzzzz" }, 3));
+            }
+
+            [Test]
             public void DuplicateCountTest()
             {
                 Assert.AreEqual(0, DuplicateCountTask.DuplicateCount(""));
