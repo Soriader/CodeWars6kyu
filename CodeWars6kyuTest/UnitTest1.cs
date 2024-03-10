@@ -7,6 +7,11 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void UniqueInOrderTest()
+            {
+                Assert.AreEqual("ABCDAB", UniqueInOrderTask.UniqueInOrder("AAAABBBCCDAABBB"));
+            }
 
             [Test]
             public void TakeATenMinutesWalkTask()
