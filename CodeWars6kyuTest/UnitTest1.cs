@@ -8,6 +8,15 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void DuplicateEncoderTest()
+            {
+                Assert.AreEqual("(((", DuplicateEncoderTask.DuplicateEncode("din"));
+                Assert.AreEqual("()()()", DuplicateEncoderTask.DuplicateEncode("recede"));
+                Assert.AreEqual(")())())", DuplicateEncoderTask.DuplicateEncode("Success"), "should ignore case");
+                Assert.AreEqual("))((", DuplicateEncoderTask.DuplicateEncode("(( @"));
+            }
+
+            [Test]
             public void UniqueInOrderTest()
             {
                 Assert.AreEqual("ABCDAB", UniqueInOrderTask.UniqueInOrder("AAAABBBCCDAABBB"));
