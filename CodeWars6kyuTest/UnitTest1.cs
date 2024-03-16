@@ -8,6 +8,12 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void FindTheOddIntTest()
+            {
+                Assert.AreEqual(5, FindTheOddIntTask.FindIt(new[] { 20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5 }));
+            }
+
+            [Test]
             public void ExpandedNumberFormTest()
             {
                 Assert.That(ExpandedNumberFormTask.ExpandedForm(12), Is.EqualTo("10 + 2"));
