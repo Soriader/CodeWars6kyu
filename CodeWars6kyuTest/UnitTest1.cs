@@ -7,6 +7,17 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+
+            [Test]
+            public void MexicanWaveTest()
+            {
+                Assert.AreEqual(new List<string> { "Hello", "hEllo", "heLlo", "helLo", "hellO" }, MexicanWaveTask.Wave("hello"));
+                Assert.AreEqual(new List<string> { "Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS" }, MexicanWaveTask.Wave("codewars"));
+                Assert.AreEqual(new List<string>{"Gap","gAp","gaP"}, MexicanWaveTask.Wave("gap"));
+
+            }
+
+
             [Test]
             public void ArrayDiffTest()
             {
