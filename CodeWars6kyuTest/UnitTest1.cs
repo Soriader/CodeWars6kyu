@@ -8,6 +8,14 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void SortTheOddTest()
+            {
+                Assert.AreEqual(new int[] { 1, 3, 2, 8, 5, 4 }, SortTheOddTask.SortArray(new int[] { 5, 3, 2, 8, 1, 4 }));
+                Assert.AreEqual(new int[] { 1, 3, 5, 8, 0 }, SortTheOddTask.SortArray(new int[] { 5, 3, 1, 8, 0 }));
+                Assert.AreEqual(new int[] { }, SortTheOddTask.SortArray(new int[] { }));
+            }
+
+            [Test]
             public void TwoSumTest()
             {
                 Assert.AreEqual(new[] { 0, 2 }, TwoSumTask.TwoSum(new[] { 1, 2, 3 }, 4).OrderBy(a => a).ToArray());

@@ -4,8 +4,7 @@
     {
         static void Main(string[] args)
         {
-           TwoSumTask.TwoSum(new int[]{5, 10, 15, 21 }, 31);
-
+            SortTheOddTask.SortArray(new int[] { 4, 5, 9, 11, 3, 2, 44, 35, 7 });
         }
     }
 }
