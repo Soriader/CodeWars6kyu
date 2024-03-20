@@ -7,6 +7,15 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+
+            [Test]
+            public void BouncingBallsTest()
+            {
+                Assert.AreEqual(3, BouncingBallsTask.bouncingBall(3.0, 0.66, 1.5));
+                Assert.AreEqual(15, BouncingBallsTask.bouncingBall(30.0, 0.66, 1.5));
+
+            }
+
             [Test]
             public void SortTheOddTest()
             {
