@@ -9,6 +9,16 @@ namespace CodeWars6kyuTest
         {
 
             [Test]
+            public void TheSupermarketQueueTest()
+            { 
+                Assert.AreEqual(5, TheSupermarketQueueTask.QueueTime(new int[] { 1, 2, 3, 4, 5 }, 100));
+                Assert.AreEqual(10, TheSupermarketQueueTask.QueueTime(new int[] { 1, 2, 3, 4 }, 1));
+                Assert.AreEqual(0, TheSupermarketQueueTask.QueueTime(new int[] { }, 1));
+                Assert.AreEqual(9, TheSupermarketQueueTask.QueueTime(new int[] { 2, 2, 3, 3, 4, 4 }, 2));
+            }
+
+
+            [Test]
             public void BouncingBallsTest()
             {
                 Assert.AreEqual(3, BouncingBallsTask.bouncingBall(3.0, 0.66, 1.5));
