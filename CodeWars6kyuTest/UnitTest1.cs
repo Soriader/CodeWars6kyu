@@ -9,6 +9,15 @@ namespace CodeWars6kyuTest
         {
 
             [Test]
+            public void FindTheUniqueNumberTest()
+            {
+                Assert.AreEqual(1, FindTheUniqueNumberTask.GetUnique(new[] { 1, 2, 2, 2 }));
+                Assert.AreEqual(-2, FindTheUniqueNumberTask.GetUnique(new[] { -2, 2, 2, 2 }));
+                Assert.AreEqual(14, FindTheUniqueNumberTask.GetUnique(new[] { 11, 11, 14, 11, 11 }));
+
+            }
+
+                [Test]
             public void TheSupermarketQueueTest()
             { 
                 Assert.AreEqual(5, TheSupermarketQueueTask.QueueTime(new int[] { 1, 2, 3, 4, 5 }, 100));
