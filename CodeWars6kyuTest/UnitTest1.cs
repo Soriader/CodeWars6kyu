@@ -7,6 +7,14 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void Test1()
+            {
+                Assert.AreEqual(3, PersistentBuggerTask.Persistence(39));
+                Assert.AreEqual(0, PersistentBuggerTask.Persistence(4));
+                Assert.AreEqual(2, PersistentBuggerTask.Persistence(25));
+                Assert.AreEqual(4, PersistentBuggerTask.Persistence(999));
+            }
 
             [Test]
             public void FindTheUniqueNumberTest()
