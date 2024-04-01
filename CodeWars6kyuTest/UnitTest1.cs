@@ -8,7 +8,14 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
-            public void Test1()
+            public void MultiplicationTableTest()
+            {
+                int[,] expected = new int[,] { { 1, 2, 3 }, { 2, 4, 6 }, { 3, 6, 9 } };
+                Assert.AreEqual(expected, MultiplicationTableTask.MultiplicationTable(3));
+            }
+
+            [Test]
+            public void PersistentBuggerTest()
             {
                 Assert.AreEqual(3, PersistentBuggerTask.Persistence(39));
                 Assert.AreEqual(0, PersistentBuggerTask.Persistence(4));
