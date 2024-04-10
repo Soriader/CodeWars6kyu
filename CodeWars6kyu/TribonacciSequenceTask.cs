@@ -13,6 +13,16 @@ namespace CodeWars6kyu
         {
             double[] result = new double[n];
 
+            if (n <= 0)
+            {
+                return new double[0]; 
+            }
+
+            if (signature == null)
+            {
+                return result; 
+            }
+
             for (int i = 0; i < 3; i++)
             {
                 result[i] = signature[i];

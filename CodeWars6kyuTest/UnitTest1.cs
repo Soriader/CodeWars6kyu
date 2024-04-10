@@ -8,6 +8,14 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void YourOrderPleaseTest()
+            {
+                Assert.AreEqual("Thi1s is2 3a T4est", YourOrderPleaseTask.Order("is2 Thi1s T4est 3a"));
+                Assert.AreEqual("Fo1r the2 g3ood 4of th5e pe6ople", YourOrderPleaseTask.Order("4of Fo1r pe6ople g3ood th5e the2"));
+                Assert.AreEqual("", YourOrderPleaseTask.Order(""));
+            }
+
+            [Test]
             public void TribonacciSequenceTest()
             {
                 Assert.AreEqual(new double[] { 1, 1, 1, 3, 5, 9, 17, 31, 57, 105 }, TribonacciSequenceTask.Tribonacci(new double[] { 1, 1, 1 }, 10));
