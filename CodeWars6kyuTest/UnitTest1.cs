@@ -8,6 +8,18 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public static void DataReverseTest()
+            {
+                int[] data1 = new int[32] { 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 };
+                int[] data2 = new int[32] { 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1 };
+                Assert.AreEqual(data2, DataReverseTask.DataReverse(data1));
+
+                int[] data3 = new int[16] { 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1 };
+                int[] data4 = new int[16] { 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0 };
+                Assert.AreEqual(data4, DataReverseTask.DataReverse(data3));
+            }
+
+            [Test]
             public void YourOrderPleaseTest()
             {
                 Assert.AreEqual("Thi1s is2 3a T4est", YourOrderPleaseTask.Order("is2 Thi1s T4est 3a"));
