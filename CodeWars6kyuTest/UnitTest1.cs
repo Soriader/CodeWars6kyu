@@ -8,6 +8,15 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void ConsonantValueTest()
+            {
+                Assert.AreEqual(26, ConsonantValueTask.Solve("zodiac"));
+                Assert.AreEqual(80, ConsonantValueTask.Solve("chruschtschov"));
+                Assert.AreEqual(38, ConsonantValueTask.Solve("khrushchev"));
+                Assert.AreEqual(103, ConsonantValueTask.Solve("twelfthstreet"));
+            }
+
+            [Test]
             public void BuildTowerTest()
             {
                 Assert.AreEqual(string.Join(",", new[] { "*" }), string.Join(",", BuildTowerTask.TowerBuilder(1)));
