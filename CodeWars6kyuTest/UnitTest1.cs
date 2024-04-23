@@ -7,6 +7,13 @@ namespace CodeWars6kyuTest
         [TestFixture]
         public class KataTest
         {
+            [Test]
+            public void BuildTowerTest()
+            {
+                Assert.AreEqual(string.Join(",", new[] { "*" }), string.Join(",", BuildTowerTask.TowerBuilder(1)));
+                Assert.AreEqual(string.Join(",", new[] { " * ", "***" }), string.Join(",", BuildTowerTask.TowerBuilder(2)));
+                Assert.AreEqual(string.Join(",", new[] { "  *  ", " *** ", "*****" }), string.Join(",", BuildTowerTask.TowerBuilder(3)));
+            }
 
             [Test]
             public void TortoiseRacingTest()
