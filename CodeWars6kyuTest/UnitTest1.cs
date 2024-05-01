@@ -8,6 +8,13 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void HighestRankNumberInAnArrayTest()
+            {
+                Assert.AreEqual(12, HighestRankNumberInAnArrayTask.HighestRank(new int[] { 12, 10, 8, 12, 7, 6, 4, 10, 12 }));
+                Assert.AreEqual(3, HighestRankNumberInAnArrayTask.HighestRank(new int[] { 12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10 }));
+            }
+
+            [Test]
             public void ConsonantValueTest()
             {
                 Assert.AreEqual(26, ConsonantValueTask.Solve("zodiac"));
