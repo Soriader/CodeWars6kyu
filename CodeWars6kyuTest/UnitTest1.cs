@@ -8,6 +8,13 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void BuyingACarTest()
+            {
+                int[] r = new int[] { 0, 4000 };
+                Assert.AreEqual(r, BuyingACarTask.nbMonths(12000, 8000, 1000, 1.5));
+            }
+
+            [Test]
             public void HighestRankNumberInAnArrayTest()
             {
                 Assert.AreEqual(12, HighestRankNumberInAnArrayTask.HighestRank(new int[] { 12, 10, 8, 12, 7, 6, 4, 10, 12 }));
