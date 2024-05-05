@@ -8,6 +8,12 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void DetectPangramTest()
+            {
+                Assert.AreEqual(true, DetectPangramTask.IsPangram("The quick brown fox jumps over the lazy dog."));
+            }
+
+            [Test]
             public void BuyingACarTest()
             {
                 int[] r = new int[] { 0, 4000 };
