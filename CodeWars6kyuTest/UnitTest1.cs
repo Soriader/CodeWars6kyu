@@ -8,6 +8,22 @@ namespace CodeWars6kyuTest
         public class KataTest
         {
             [Test]
+            public void DeleteOccurrencesTest()
+            {
+                var expected = new int[] { 20, 37, 21 };
+
+                var actual = DeleteOccurrencesTask.DeleteNth(new int[] { 20, 37, 20, 21 }, 1);
+
+                CollectionAssert.AreEqual(expected, actual);
+
+                var expected2 = new int[] { 1, 1, 3, 3, 7, 2, 2, 2 };
+
+                var actual2 = DeleteOccurrencesTask.DeleteNth(new int[] { 1, 1, 3, 3, 7, 2, 2, 2, 2 }, 3);
+
+                CollectionAssert.AreEqual(expected2, actual2);
+            }
+
+            [Test]
             public void DetectPangramTest()
             {
                 Assert.AreEqual(true, DetectPangramTask.IsPangram("The quick brown fox jumps over the lazy dog."));
