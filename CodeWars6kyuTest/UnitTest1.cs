@@ -9,6 +9,14 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+                [Test]
+
+                public void EncryptThisTest()
+                {
+                    Assert.AreEqual("72olle", EncryptThisTask.EncryptThis("Hello"));
+                    Assert.AreEqual("103doo", EncryptThisTask.EncryptThis("good"));
+                    Assert.AreEqual("87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri", EncryptThisTask.EncryptThis("Why can we not all be like that wise old bird"));
+                }
 
                 [Test]
                 public void StreetFighterCharacterSelectionTest()
