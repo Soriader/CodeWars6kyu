@@ -1,4 +1,5 @@
 using CodeWars6kyu;
+using System.Text;
 
 namespace CodeWars6kyuTest
 {
@@ -9,8 +10,21 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
-                [Test]
 
+                [Test]
+                public void GiveMeADiamondTest()
+                {
+                    var expected = new StringBuilder();
+                    expected.Append("  *\n");
+                    expected.Append(" ***\n");
+                    expected.Append("*****\n");
+                    expected.Append(" ***\n");
+                    expected.Append("  *\n");
+
+                    Assert.AreEqual(expected.ToString(), GiveMeADiamondTask.Print(5));
+                }
+
+                [Test]
                 public void EncryptThisTest()
                 {
                     Assert.AreEqual("72olle", EncryptThisTask.EncryptThis("Hello"));
