@@ -12,6 +12,26 @@ namespace CodeWars6kyuTest
             {
 
                 [Test]
+                public void AddOneArrayTest()
+                {
+                    var num1 = new int[] { 2, 3, 9 };
+                    var newNum1 = new int[] { 2, 4, 0 };
+                    Assert.AreEqual(newNum1, AddOneArrayTask.UpArray(num1));
+
+                    var num2 = new int[] { 4, 3, 2, 5 };
+                    var newNum2 = new int[] { 4, 3, 2, 6 };
+                    Assert.AreEqual(newNum2, AddOneArrayTask.UpArray(num2));
+
+                    var num3 = new int[] { 9, 9 };
+                    var newNum3 = new int[] { 1, 0, 0 };
+                    Assert.AreEqual(newNum3, AddOneArrayTask.UpArray(num3));
+
+                    var num4 = new int[] { 9, 2, 2, 3, 3, 7, 2, 0, 3, 6, 8, 5, 4, 7, 7, 5, 8, 0, 7, 5, 3, 2, 6, 7, 8, 4, 2, 4, 2, 6, 7, 8, 7, 4, 5, 2, 1 };
+                    var newNum4 = new int[] { 9, 2, 2, 3, 3, 7, 2, 0, 3, 6, 8, 5, 4, 7, 7, 5, 8, 0, 7, 5, 3, 2, 6, 7, 8, 4, 2, 4, 2, 6, 7, 8, 7, 4, 5, 2, 2 };
+                    Assert.AreEqual(newNum4, AddOneArrayTask.UpArray(num4));
+                }
+
+                [Test]
                 public void GiveMeADiamondTest()
                 {
                     var expected = new StringBuilder();
