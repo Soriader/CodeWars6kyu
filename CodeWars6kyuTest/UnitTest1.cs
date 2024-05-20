@@ -10,6 +10,13 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+                [Test]
+                public void WordToa10nTest()
+                {
+                    Assert.AreEqual("i18n", WordToa10nTask.Abbreviate("internationalization"));
+                    Assert.AreEqual("my. dog, isn't f5g v2y w2l.", WordToa10nTask.Abbreviate("my. dog, isn't feeling very well."));
+
+                }
 
                 [Test]
                 public void AddOneArrayTest()
