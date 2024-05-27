@@ -10,6 +10,14 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+                [Test]
+                public void CountTheSmileyFacesTest()
+                {
+                    Assert.AreEqual(4, CountTheSmileyFacesTask.CountSmileys(new string[] { ":D", ":~)", ";~D", ":)" }));
+                    Assert.AreEqual(2, CountTheSmileyFacesTask.CountSmileys(new string[] { ":)", ":(", ":D", ":O", ":;" }));
+                    Assert.AreEqual(1, CountTheSmileyFacesTask.CountSmileys(new string[] { ";]", ":[", ";*", ":$", ";-D" }));
+                    Assert.AreEqual(0, CountTheSmileyFacesTask.CountSmileys(new string[] { ";", ")", ";*", ":$", "8-D" }));
+                }
 
                 [Test]
                 public void BuildAPileOfCubesTest()
