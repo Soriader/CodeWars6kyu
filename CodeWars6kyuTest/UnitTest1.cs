@@ -10,6 +10,20 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+
+                
+                [Test]
+                public void DecipherThisTest()
+                {
+                    Assert.AreEqual("", DecipherThisTask.DecipherThis(""));
+                    Assert.AreEqual("A", DecipherThisTask.DecipherThis("65"));
+                    Assert.AreEqual("Ab", DecipherThisTask.DecipherThis("65b"));
+                    Assert.AreEqual("Ready set go", DecipherThisTask.DecipherThis("82yade 115te 103o"));
+                    Assert.AreEqual("Thank you Piotr for all your help", DecipherThisTask.DecipherThis("84kanh 121uo 80roti 102ro 97ll 121ruo 104ple"));
+                    Assert.AreEqual("Why can we not all be like that wise old bird", DecipherThisTask.DecipherThis("87yh 99na 119e 110to 97ll 98e 108eki 116tah 119esi 111dl 98dri"));
+                    Assert.AreEqual("Have a go at this and see how you do", DecipherThisTask.DecipherThis("72eva 97 103o 97t 116sih 97dn 115ee 104wo 121uo 100o"));
+                }
+
                 [Test]
                 public void CountTheSmileyFacesTest()
                 {
