@@ -10,6 +10,19 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+
+                [Test]
+                public void ArrayHelpersTest()
+                {
+                    CollectionAssert.AreEqual(new[] { 1, 4, 9, 16, 25 }, ArrayHelpersTask.Square(new[] { 1, 2, 3, 4, 5 }));
+                    CollectionAssert.AreEqual(new[] { 1, 8, 27, 64, 125 }, ArrayHelpersTask.Cube(new[] { 1, 2, 3, 4, 5 }));
+                    Assert.AreEqual(15, ArrayHelpersTask.Sum(new[] { 1, 2, 3, 4, 5 }));
+                    Assert.AreEqual(3, ArrayHelpersTask.Average(new[] { 1, 2, 3, 4, 5 }));
+                    CollectionAssert.AreEqual(new[] { 2, 4 }, ArrayHelpersTask.Even(new[] { 1, 2, 3, 4, 5 }));
+                    CollectionAssert.AreEqual(new[] { 1, 3, 5 }, ArrayHelpersTask.Odd(new[] { 1, 2, 3, 4, 5 }));
+
+                }
+
                 [Test]
                 public static void StatisticsForAnAthleticAssociationTest()
                 {

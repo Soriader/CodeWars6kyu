@@ -29,10 +29,7 @@ namespace CodeWars6kyu
                 mediana = records[half];
             }
 
-
-
             return $"Range: {(records.Max() - records.Min()).ToString(@"hh\|mm\|ss")} Average: {TimeSpan.FromTicks(records.Select(x => x.Ticks).Sum() / records.Count()).ToString(@"hh\|mm\|ss")} Median: {mediana.ToString(@"hh\|mm\|ss")}";
-
 
         }
     }
