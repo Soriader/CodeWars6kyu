@@ -10,6 +10,21 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+
+                [Test]
+                public static void CountCharactersInYourStringTest()
+                {
+                    //assign
+                    Dictionary<char, int> expectedResult = new();
+                    expectedResult.Add('a', 2);
+                    expectedResult.Add('b', 1);
+                    //act
+                    var result = CountCharactersInYourStringTask.Count("aba");
+                    //assert
+                    Assert.AreEqual(expectedResult, result);
+
+                }
+
                 [Test]
                 public static void MeetingTest()
                 {
