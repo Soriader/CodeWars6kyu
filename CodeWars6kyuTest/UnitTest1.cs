@@ -10,6 +10,14 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
+                [Test]
+                public void FibonacciTribonacciAndFriendsTest()
+                {
+                    Assert.AreEqual(new double[] { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 }, FibonacciTribonacciAndFriendsTask.Xbonacci(new double[] { 0, 1 }, 10));
+                    Assert.AreEqual(new double[] { 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 }, FibonacciTribonacciAndFriendsTask.Xbonacci(new double[] { 1, 1 }, 10));
+                    Assert.AreEqual(new double[] { 0, 0, 0, 0, 1, 1, 2, 4, 8, 16 }, FibonacciTribonacciAndFriendsTask.Xbonacci(new double[] { 0, 0, 0, 0, 1 }, 10));
+                    Assert.AreEqual(new double[] { 1, 0, 0, 0, 0, 0, 1, 2, 3, 6 }, FibonacciTribonacciAndFriendsTask.Xbonacci(new double[] { 1, 0, 0, 0, 0, 0, 1 }, 10));
+                }
 
                 [Test]
                 public static void CountCharactersInYourStringTest()
