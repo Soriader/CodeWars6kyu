@@ -11,6 +11,13 @@ namespace CodeWars6kyuTest
             public class FrontTests
             {
                 [Test]
+                public void ExtractPortionOfFileNameTest()
+                {
+                    Assert.AreEqual("FILE_NAME.EXTENSION", ExtractPortionOfFileNameTask.ExtractFileName("1_FILE_NAME.EXTENSION.OTHEREXTENSIONadasdassdassds34"));
+                    Assert.AreEqual("FILE_NAME.EXTENSION", ExtractPortionOfFileNameTask.ExtractFileName("1231231223123131_FILE_NAME.EXTENSION.OTHEREXTENSION"));
+                }
+
+                [Test]
                 public void FibonacciTribonacciAndFriendsTest()
                 {
                     Assert.AreEqual(new double[] { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 }, FibonacciTribonacciAndFriendsTask.Xbonacci(new double[] { 0, 1 }, 10));
