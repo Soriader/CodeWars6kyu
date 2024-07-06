@@ -11,6 +11,13 @@ namespace CodeWars6kyuTest
             public class FrontTests
             {
                 [Test]
+                public void Basic_Tests()
+                {
+                    Assert.AreEqual(7, ArrayDeepCountTask.DeepCount(new object[] { 1, 2, new object[] { 3, 4, new object[] { 5 } } }));
+                    Assert.AreEqual(0, ArrayDeepCountTask.DeepCount(new object[] { }));
+                }
+
+                [Test]
                 public static void RainfallTest()
                 {
 
@@ -54,7 +61,7 @@ namespace CodeWars6kyuTest
 
             } 
 
-            [Test]
+                [Test]
                 public static void PrizeDrawTest()
                 {
                     string st = "";
