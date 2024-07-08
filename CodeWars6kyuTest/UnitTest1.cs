@@ -11,7 +11,14 @@ namespace CodeWars6kyuTest
             public class FrontTests
             {
                 [Test]
-                public void Basic_Tests()
+                public void ReverseOrRotateTest()
+                {
+                    Assert.AreEqual("23456771", ReverseOrRotateTask.RevRot("123456779", 8));
+                    Assert.AreEqual("44668753", ReverseOrRotateTask.RevRot("66443875", 4));
+                }
+
+                [Test]
+                public void ArrayDeepCountTest()
                 {
                     Assert.AreEqual(7, ArrayDeepCountTask.DeepCount(new object[] { 1, 2, new object[] { 3, 4, new object[] { 5 } } }));
                     Assert.AreEqual(0, ArrayDeepCountTask.DeepCount(new object[] { }));
