@@ -11,6 +11,18 @@ namespace CodeWars6kyuTest
             public class FrontTests
             {
                 [Test]
+                public void EnglishBeggarsTest()
+                {
+                    int[] test = { 1, 2, 3, 4, 5 };
+                    int[] a1 = { 15 }, a2 = { 9, 6 }, a3 = { 5, 7, 3 }, a4 = { 1, 2, 3, 4, 5, 0 }, a5 = { };
+                    Assert.AreEqual(a1, EnglishBeggarsTask.Beggars(test, 1));
+                    Assert.AreEqual(a2, EnglishBeggarsTask.Beggars(test, 2));
+                    Assert.AreEqual(a3, EnglishBeggarsTask.Beggars(test, 3));
+                    Assert.AreEqual(a4, EnglishBeggarsTask.Beggars(test, 6));
+                    Assert.AreEqual(a5, EnglishBeggarsTask.Beggars(test, 0));
+                }
+
+                [Test]
                 public void ReverseOrRotateTest()
                 {
                     Assert.AreEqual("23456771", ReverseOrRotateTask.RevRot("123456779", 8));
