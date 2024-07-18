@@ -11,6 +11,17 @@ namespace CodeWars6kyuTest
             public class FrontTests
             {
                 [Test]
+                public void RemoveTheParenthesesTest()
+                {
+                    Assert.AreEqual("exampleexample", RemoveTheParenthesesTask.RemoveParentheses("example(unwanted thing)example"));
+                    Assert.AreEqual("example  example", RemoveTheParenthesesTask.RemoveParentheses("example (unwanted thing) example"));
+                    Assert.AreEqual("a e", RemoveTheParenthesesTask.RemoveParentheses("a (bc d)e"));
+                    Assert.AreEqual("a", RemoveTheParenthesesTask.RemoveParentheses("a(b(c))"));
+                    Assert.AreEqual("hello example  something", RemoveTheParenthesesTask.RemoveParentheses("hello example (words(more words) here) something"));
+                    Assert.AreEqual("  ", RemoveTheParenthesesTask.RemoveParentheses("(first group) (second group) (third group)"));
+                }
+
+                [Test]
                 public static void EurekaTest()
                 {
                     static string Array2String(long[] list)
