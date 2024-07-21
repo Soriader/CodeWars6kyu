@@ -10,7 +10,17 @@ namespace CodeWars6kyuTest
         {
             public class FrontTests
             {
-                [Test]
+				[Test]
+				public void NewCashierDoesNotKnowTest()
+				{
+					Assert.AreEqual("Burger Fries Fries Chicken Pizza Sandwich Milkshake Coke",
+					NewCashierDoesNotKnowTask.GetOrder("pizzachickenfriesburgercokemilkshakefriessandwich"));
+
+					Assert.AreEqual("Burger Fries Chicken Pizza Pizza Pizza Sandwich Milkshake Milkshake Coke",
+						NewCashierDoesNotKnowTask.GetOrder("milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza"));
+				}
+
+				[Test]
                 public void RemoveTheParenthesesTest()
                 {
                     Assert.AreEqual("exampleexample", RemoveTheParenthesesTask.RemoveParentheses("example(unwanted thing)example"));
