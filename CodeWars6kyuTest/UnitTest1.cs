@@ -11,6 +11,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void PlayingWithDigitsTest()
+				{
+					Assert.AreEqual(51, PlayingWithDigitsTask.digPow(46288, 3));
+					Assert.AreEqual(1, PlayingWithDigitsTask.digPow(89, 1));
+					Assert.AreEqual(-1, PlayingWithDigitsTask.digPow(92, 1));
+
+				}
+
+				[Test]
 				public void TitleCaseTest()
 				{
 					Assert.AreEqual("The Quick Brown Fox", TitleCaseTask.TitleCase("the quick brown fox"));
