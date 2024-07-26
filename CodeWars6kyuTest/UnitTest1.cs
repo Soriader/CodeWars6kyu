@@ -11,6 +11,17 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void StepsInPrimesTest()
+				{
+					Assert.AreEqual(new long[] { 101, 103 }, StepsInPrimesTask.Step(2, 100, 110));
+					Assert.AreEqual(new long[] { 103, 107 }, StepsInPrimesTask.Step(4, 100, 110));
+					Assert.AreEqual(new long[] { 101, 107 }, StepsInPrimesTask.Step(6, 100, 110));
+					Assert.AreEqual(new long[] { 359, 367 }, StepsInPrimesTask.Step(8, 300, 400));
+					Assert.AreEqual(new long[] { 307, 317 }, StepsInPrimesTask.Step(10, 300, 400));
+					Assert.AreEqual(null, StepsInPrimesTask.Step(11, 30000, 100000));
+				}
+
+				[Test]
 				public void PlayingWithDigitsTest()
 				{
 					Assert.AreEqual(51, PlayingWithDigitsTask.digPow(46288, 3));
