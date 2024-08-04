@@ -11,6 +11,28 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void LinkedListsLengthCountTaskLengthTest()
+				{
+					LinkedListsLengthCountTask list = LinkedListsLengthCountTask.BuildOneTwoThree();
+					Assert.AreEqual(0, LinkedListsLengthCountTask.Length(null), "Length of null list should be zero.");
+					Assert.AreEqual(1, LinkedListsLengthCountTask.Length(new LinkedListsLengthCountTask(99)), "Length of single node list should be one.");
+					Assert.AreEqual(3, LinkedListsLengthCountTask.Length(list), "Length of the three node list should be three.");
+				}
+				[Test]
+				public void LinkedListsLengthCountTaskCountTest()
+				{
+					LinkedListsLengthCountTask list = LinkedListsLengthCountTask.BuildOneTwoThree();
+					Assert.AreEqual(1, LinkedListsLengthCountTask.Count(list, value => value == 1), "list should only contain one 1.");
+					Assert.AreEqual(1, LinkedListsLengthCountTask.Count(list, value => value == 2), "list should only contain one 2.");
+					Assert.AreEqual(1, LinkedListsLengthCountTask.Count(list, value => value == 3), "list should only contain one 3.");
+					Assert.AreEqual(0, LinkedListsLengthCountTask.Count(list, value => value == 99), "list should return zero for integer not found in list.");
+					Assert.AreEqual(0, LinkedListsLengthCountTask.Count(null, value => value == 1), "null list should always return count of zero.");
+
+					Assert.AreEqual(2, LinkedListsLengthCountTask.Count(list, value => value % 2 != 0), "list should contain two odd numbers.");
+					Assert.AreEqual(1, LinkedListsLengthCountTask.Count(list, value => value % 2 == 0), "list should contain one even number.");
+				}
+
+				[Test]
 				public void HelpTheBooksellerTest()
 				{
 					string[] art = new string[] { "ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600" };
