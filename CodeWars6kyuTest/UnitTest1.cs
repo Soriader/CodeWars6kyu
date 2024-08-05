@@ -11,6 +11,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void SampleTest1()
+				{
+					Assert.AreEqual(10, IntegerDepthTask.ComputeDepth(1));
+					Assert.AreEqual(9, IntegerDepthTask.ComputeDepth(42));
+
+				}
+
+				[Test]
 				public void LinkedListsLengthCountTaskLengthTest()
 				{
 					LinkedListsLengthCountTask list = LinkedListsLengthCountTask.BuildOneTwoThree();
