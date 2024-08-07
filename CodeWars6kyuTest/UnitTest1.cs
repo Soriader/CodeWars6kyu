@@ -11,6 +11,20 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void BallUpwardsTest()
+				{
+					testing(BallUpwardsTask.MaxBall(37), 10);
+					testing(BallUpwardsTask.MaxBall(45), 13);
+					testing(BallUpwardsTask.MaxBall(99), 28);
+					testing(BallUpwardsTask.MaxBall(85), 24);
+
+					static void testing(int actual, int expected)
+					{
+						Assert.AreEqual(expected, actual);
+					}
+				}
+
+				[Test]
 				public void SampleTest1()
 				{
 					Assert.AreEqual(10, IntegerDepthTask.ComputeDepth(1));
