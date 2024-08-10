@@ -10,6 +10,15 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+				[Test]
+				public void SumTheTreeTest()
+				{
+					var root = new SumTheTreeTask(10, new SumTheTreeTask(1), new SumTheTreeTask(2));
+					Assert.AreEqual(13, SumTheTreeTask.SumTree(root), "Sum of values for a simple tree should be 13.");
+
+					var root2 = new SumTheTreeTask(11, new SumTheTreeTask(0), new SumTheTreeTask(0, null, new SumTheTreeTask(1)));
+					Assert.AreEqual(12, SumTheTreeTask.SumTree(root2), "Sum of values for an unbalanced tree should be 12.");
+				}
 
 				[Test]
 				public static void SalesmanTravelTest()
