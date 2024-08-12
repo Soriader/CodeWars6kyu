@@ -1,5 +1,7 @@
 using CodeWars6kyu;
 using System.Text;
+using System.Collections;
+
 
 namespace CodeWars6kyuTest
 {
@@ -10,6 +12,14 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+				[Test]
+				public void PIApproximationTest()
+				{
+					ArrayList r = PIApproximationTask.iterPi(0.1);
+					ArrayList c = new ArrayList { 10, 3.0418396189 };
+					Assert.AreEqual(c, r);
+				}
+
 				[Test]
 				public void SumTheTreeTest()
 				{
