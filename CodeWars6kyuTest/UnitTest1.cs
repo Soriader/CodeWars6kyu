@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void LongestPalindromeTest()
+				{
+					Assert.AreEqual(5, LongestPalindromeTask.GetLongestPalindrome("'12 21glg' value test"));
+
+				}
+
+				[Test]
 				public void ClockyMcClockFaceTest()
 				{
 					Assert.AreEqual("12:00", ClockyMcClockFaceTask.WhatTimeIsIt(0));
