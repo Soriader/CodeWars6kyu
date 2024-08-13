@@ -10,26 +10,17 @@ namespace CodeWars6kyu
 	{
 		public static string WhatTimeIsIt(double angle)
 		{
-			double oneDegree = 0.3;
+			int hour = (int)(angle / 30);
 
-			if(0 == angle || angle >= 360)
+			int minutes = (int)((angle % 30) * 2);
+
+			if (hour == 0)
 			{
-				return "12:00";
+				hour = 12;
 			}
 
-			var check = angle / oneDegree;
-
-			var toChar = check.ToString().ToCharArray();
-
-			if(toChar.Length == 3)
-			{
-				return $"0{toChar[0]}:{toChar[1]}{toChar[2]}";
-			}
-			else
-			{
-				return $"{toChar[0]}{toChar[1]}:{toChar[2]}{toChar[3]}";
-			}
-
+			return $"{hour:D2}:{minutes:D2}";
 		}
 	}
 }
+//https://www.codewars.com/kata/59752e1f064d1261cb0000ec/train/csharp
