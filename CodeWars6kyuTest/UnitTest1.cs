@@ -1,6 +1,7 @@
 using CodeWars6kyu;
 using System.Text;
 using System.Collections;
+using NUnit.Framework.Internal;
 
 
 namespace CodeWars6kyuTest
@@ -12,6 +13,17 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+				[Test]
+				public void ClockyMcClockFaceTest()
+				{
+					Assert.AreEqual("12:00", ClockyMcClockFaceTask.WhatTimeIsIt(0));
+					Assert.AreEqual("12:00", ClockyMcClockFaceTask.WhatTimeIsIt(360));
+					Assert.AreEqual("03:00", ClockyMcClockFaceTask.WhatTimeIsIt(90));
+					Assert.AreEqual("06:00", ClockyMcClockFaceTask.WhatTimeIsIt(180));
+					Assert.AreEqual("09:00", ClockyMcClockFaceTask.WhatTimeIsIt(270));
+
+				}
+
 				[Test]
 				public void PIApproximationTest()
 				{
