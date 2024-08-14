@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void TheDeafRatsOfHamelinTest()
+                {
+					Assert.AreEqual(0, TheDeafRatsOfHamelinTask.CountDeafRats("~O~O~O~O P"));
+					Assert.AreEqual(1, TheDeafRatsOfHamelinTask.CountDeafRats("P O~ O~ ~O O~"));
+					Assert.AreEqual(2, TheDeafRatsOfHamelinTask.CountDeafRats("~O~O~O~OP~O~OO~"));
+				}
+				
+
+				[Test]
 				public void LongestPalindromeTest()
 				{
 					Assert.AreEqual(5, LongestPalindromeTask.GetLongestPalindrome("'12 21glg' value test"));
