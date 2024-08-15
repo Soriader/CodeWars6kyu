@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+                public void PlayingOnAChessboardTest()
+				{
+					Assert.AreEqual("[0]", PlayingOnAChessboardTask.Game(0));
+					Assert.AreEqual("[1, 2]", PlayingOnAChessboardTask.Game(1));
+					Assert.AreEqual("[32]", PlayingOnAChessboardTask.Game(8));
+				}
+
+				[Test]
 				public void TheDeafRatsOfHamelinTest()
                 {
 					Assert.AreEqual(0, TheDeafRatsOfHamelinTask.CountDeafRats("~O~O~O~O P"));
