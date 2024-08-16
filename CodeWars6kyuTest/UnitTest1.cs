@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void BinaryToTextASCIIConversionTest()
+				{
+					Assert.AreEqual("", BinaryToTextASCIIConversionTask.BinaryToString(""));
+					Assert.AreEqual("Hello", BinaryToTextASCIIConversionTask.BinaryToString("0100100001100101011011000110110001101111"));
+				}
+
+				[Test]
 				public void IPv4Toint32Test()
 				{
 					Assert.AreEqual(2149583361, IPv4Toint32Task.ToInt32("128.32.10.1"), "Incorrect answer for ip = \"128.32.10.1\"");
