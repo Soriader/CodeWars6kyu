@@ -14,6 +14,12 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void IPv4Toint32Test()
+				{
+					Assert.AreEqual(2149583361, IPv4Toint32Task.ToInt32("128.32.10.1"), "Incorrect answer for ip = \"128.32.10.1\"");
+				}
+
+				[Test]
                 public void PlayingOnAChessboardTest()
 				{
 					Assert.AreEqual("[0]", PlayingOnAChessboardTask.Game(0));
