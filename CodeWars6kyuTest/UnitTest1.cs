@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void RoundByStepsTest()
+				{
+					Assert.AreEqual(4, RoundByStepsTask.Solution(4.2));
+					Assert.AreEqual(4.5, RoundByStepsTask.Solution(4.4));
+					Assert.AreEqual(4.5, RoundByStepsTask.Solution(4.6));
+					Assert.AreEqual(5, RoundByStepsTask.Solution(4.8));
+				}
+
+				[Test]
 				public void BinaryToTextASCIIConversionTest()
 				{
 					Assert.AreEqual("", BinaryToTextASCIIConversionTask.BinaryToString(""));
