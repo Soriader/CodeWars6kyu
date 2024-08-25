@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void TankTruckTest()
+				{
+					Assert.AreEqual(2940, TankTruckTask.TankVol(5, 7, 3848));
+					Assert.AreEqual(907, TankTruckTask.TankVol(2, 7, 3848));
+				}
+
+				[Test]
 				public void RoundByStepsTest()
 				{
 					Assert.AreEqual(4, RoundByStepsTask.Solution(4.2));
