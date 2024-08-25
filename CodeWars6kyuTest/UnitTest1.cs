@@ -13,6 +13,38 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+                [Test]
+				public void FinishTest1()
+				{
+
+					 int[,] maze = new int[,] 
+                     {  { 1, 1, 1, 1, 1, 1, 1 },
+						{ 1, 0, 0, 0, 0, 0, 3 },
+						{ 1, 0, 1, 0, 1, 0, 1 },
+						{ 0, 0, 1, 0, 0, 0, 1 },
+						{ 1, 0, 1, 0, 1, 0, 1 },
+						{ 1, 0, 0, 0, 0, 0, 1 },
+						{ 1, 2, 1, 0, 1, 0, 1 } 
+                     };
+
+					MazeRunnerTask test = new MazeRunnerTask();
+
+
+					string[] directions = new string[] { "N", "N", "N", "N", "N", "E", "E", "E", "E", "E" };
+					string result = test.MazeRunner(maze, directions);
+					Assert.AreEqual("Finish", result, "Should return: 'Finish'");
+
+
+					string[] directions2 = new string[] { "N", "N", "N", "W", "W" };
+					string result2 = test.MazeRunner(maze, directions2);
+					Assert.AreEqual("Dead", result2, "Should return: 'Dead'");
+
+					string[] directions3 = new string[] { "N", "E", "E", "E", "E" };
+					string result3 = test.MazeRunner(maze, directions3);
+					Assert.AreEqual("Lost", result3, "Should return: 'Lost'");
+				}
+
+
 				[Test]
 				public static void TankTruckTest()
 				{
