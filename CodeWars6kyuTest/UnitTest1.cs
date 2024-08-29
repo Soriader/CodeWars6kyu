@@ -13,7 +13,17 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
-                [Test]
+				[Test]
+				public void TransformToPrimeTest()
+				{
+					Assert.AreEqual(1, TransformToPrimeTask.MinimumNumber(new int[] { 3, 1, 2 }));
+					Assert.AreEqual(0, TransformToPrimeTask.MinimumNumber(new int[] { 5, 2 }));
+					Assert.AreEqual(0, TransformToPrimeTask.MinimumNumber(new int[] { 1, 1, 1 }));
+					Assert.AreEqual(5, TransformToPrimeTask.MinimumNumber(new int[] { 2, 12, 8, 4, 6 }));
+					Assert.AreEqual(2, TransformToPrimeTask.MinimumNumber(new int[] { 50, 39, 49, 6, 17, 28 }));
+				}
+
+				[Test]
 				public void FinishTest1()
 				{
 
