@@ -14,6 +14,36 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void ReducingByStepsTest()
+				{
+					static void testing(string actual, string expected)
+					{
+						Assert.AreEqual(expected, actual);
+					}
+					static string Array2String(long[] list)
+					{
+						return "[" + string.Join(",", list) + "]";
+					}
+
+					long[] a = new long[] { 18, 69, -90, -78, 65, 40 };
+					long[] r = new long[] { 18, 3, 3, 3, 1, 1 };
+					long[] op = ReducingByStepsTask.OperArray(ReducingByStepsTask.gcdi, a, a[0]);
+					testing(Array2String(op), Array2String(r));
+					r = new long[] { 18, 414, 2070, 26910, 26910, 107640 };
+					op = ReducingByStepsTask.OperArray(ReducingByStepsTask.lcmu, a, a[0]);
+					testing(Array2String(op), Array2String(r));
+					r = new long[] { 18, 87, -3, -81, -16, 24 };
+					op = ReducingByStepsTask.OperArray(ReducingByStepsTask.som, a, 0);
+					testing(Array2String(op), Array2String(r));
+					r = new long[] { 18, 18, -90, -90, -90, -90 };
+					op = ReducingByStepsTask.OperArray(ReducingByStepsTask.mini, a, a[0]);
+					testing(Array2String(op), Array2String(r));
+					r = new long[] { 18, 69, 69, 69, 69, 69 };
+					op = ReducingByStepsTask.OperArray(ReducingByStepsTask.maxi, a, a[0]);
+					testing(Array2String(op), Array2String(r));
+				}
+
+				[Test]
 				public void TransformToPrimeTest()
 				{
 					Assert.AreEqual(1, TransformToPrimeTask.MinimumNumber(new int[] { 3, 1, 2 }));
