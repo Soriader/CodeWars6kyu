@@ -14,6 +14,17 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void BasicTest()
+				{
+					Assert.AreEqual("Right side wins!", AlphabetWarTask.AlphabetWar("z"));
+					Assert.AreEqual("Let's fight again!", AlphabetWarTask.AlphabetWar("****"));
+					Assert.AreEqual("Let's fight again!", AlphabetWarTask.AlphabetWar("z*dq*mw*pb*s"));
+					Assert.AreEqual("Let's fight again!", AlphabetWarTask.AlphabetWar("zdqmwpbs"));
+					Assert.AreEqual("Right side wins!", AlphabetWarTask.AlphabetWar("zz*zzs"));
+					Assert.AreEqual("Left side wins!", AlphabetWarTask.AlphabetWar("*wwwwww*z*"));
+				}
+
+			    [Test]
 				public void FruitMachineTest()
 				{
 					FruitMachineTask kata = new FruitMachineTask();
