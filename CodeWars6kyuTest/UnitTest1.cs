@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void FruitMachineTest()
+				{
+					FruitMachineTask kata = new FruitMachineTask();
+					string[] reel = new string[] { "Wild", "Star", "Bell", "Shell", "Seven", "Cherry", "Bar", "King", "Queen", "Jack" };
+					List<string[]> reels = new List<string[]> { reel, reel, reel };
+					int[] spins = new int[] { 0, 0, 0 };
+					Assert.AreEqual(100, kata.Fruit(reels, spins));
+				}
+
+				[Test]
 				public static void ReducingByStepsTest()
 				{
 					static void testing(string actual, string expected)
