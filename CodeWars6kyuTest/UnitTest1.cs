@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void HowMuchTest()
+				{
+					Assert.AreEqual("[[M: 37 B: 5 C: 4][M: 100 B: 14 C: 11]]", HowMuchTask.Howmuch(1, 100));
+					Assert.AreEqual("[]", HowMuchTask.Howmuch(2950, 2950));
+				}
+
+				[Test]
 				public void BasicTest()
 				{
 					Assert.AreEqual("Right side wins!", AlphabetWarTask.AlphabetWar("z"));
