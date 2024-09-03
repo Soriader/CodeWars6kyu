@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void SumOfPrimeIndexedElementsTest()
+				{
+					Assert.AreEqual(0, SumOfPrimeIndexedElementsTask.Solve(new int[] { }));
+					Assert.AreEqual(7, SumOfPrimeIndexedElementsTask.Solve(new int[] { 1, 2, 3, 4 }));
+					Assert.AreEqual(13, SumOfPrimeIndexedElementsTask.Solve(new int[] { 1, 2, 3, 4, 5, 6 }));
+					Assert.AreEqual(47, SumOfPrimeIndexedElementsTask.Solve(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }));
+
+				}
+
+				[Test]
 				public static void HowMuchTest()
 				{
 					Assert.AreEqual("[[M: 37 B: 5 C: 4][M: 100 B: 14 C: 11]]", HowMuchTask.Howmuch(1, 100));
