@@ -14,6 +14,26 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void BasicTests()
+				{
+					Assert.AreEqual(new[] { "Friday", "Saturday" }, MostFrequentWeekdaysTask.MostFrequentDays(2016));
+					Assert.AreEqual(new[] { "Monday" }, MostFrequentWeekdaysTask.MostFrequentDays(1770));
+					Assert.AreEqual(new[] { "Monday" }, MostFrequentWeekdaysTask.MostFrequentDays(2001));
+					Assert.AreEqual(new[] { "Monday", "Tuesday" }, MostFrequentWeekdaysTask.MostFrequentDays(1968));
+					Assert.AreEqual(new[] { "Saturday" }, MostFrequentWeekdaysTask.MostFrequentDays(1785));
+					Assert.AreEqual(new[] { "Saturday" }, MostFrequentWeekdaysTask.MostFrequentDays(1910));
+					Assert.AreEqual(new[] { "Saturday" }, MostFrequentWeekdaysTask.MostFrequentDays(2135));
+					Assert.AreEqual(new[] { "Sunday" }, MostFrequentWeekdaysTask.MostFrequentDays(3043));
+					Assert.AreEqual(new[] { "Sunday" }, MostFrequentWeekdaysTask.MostFrequentDays(3150));
+					Assert.AreEqual(new[] { "Thursday" }, MostFrequentWeekdaysTask.MostFrequentDays(3361));
+					Assert.AreEqual(new[] { "Tuesday" }, MostFrequentWeekdaysTask.MostFrequentDays(1901));
+					Assert.AreEqual(new[] { "Tuesday" }, MostFrequentWeekdaysTask.MostFrequentDays(3230));
+					Assert.AreEqual(new[] { "Wednesday" }, MostFrequentWeekdaysTask.MostFrequentDays(1794));
+					Assert.AreEqual(new[] { "Wednesday" }, MostFrequentWeekdaysTask.MostFrequentDays(1986));
+
+				}
+
+				[Test]
 				public void SumOfPrimeIndexedElementsTest()
 				{
 					Assert.AreEqual(0, SumOfPrimeIndexedElementsTask.Solve(new int[] { }));
