@@ -14,7 +14,17 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
-				public void BasicTests()
+				public void ClockInMirrorTest()
+				{
+					StringAssert.AreEqualIgnoringCase("06:35", ClockInMirrorTask.WhatIsTheTime("05:25"));
+					StringAssert.AreEqualIgnoringCase("11:59", ClockInMirrorTask.WhatIsTheTime("12:01"));
+					StringAssert.AreEqualIgnoringCase("12:02", ClockInMirrorTask.WhatIsTheTime("11:58"));
+					StringAssert.AreEqualIgnoringCase("12:00", ClockInMirrorTask.WhatIsTheTime("12:00"));
+					StringAssert.AreEqualIgnoringCase("02:00", ClockInMirrorTask.WhatIsTheTime("10:00"));
+				}
+
+				[Test]
+				public void MostFrequentWeekdaysTest()
 				{
 					Assert.AreEqual(new[] { "Friday", "Saturday" }, MostFrequentWeekdaysTask.MostFrequentDays(2016));
 					Assert.AreEqual(new[] { "Monday" }, MostFrequentWeekdaysTask.MostFrequentDays(1770));
