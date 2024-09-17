@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void NumberFormatTest()
+				{
+					StringAssert.AreEqualIgnoringCase("100,000", NumberFormatTask.NumberFormat(100000));
+					StringAssert.AreEqualIgnoringCase("5,678,545", NumberFormatTask.NumberFormat(5678545));
+					StringAssert.AreEqualIgnoringCase("-251,347,469", NumberFormatTask.NumberFormat(-251347469));
+				}
+
+				[Test]
 				public void ClockInMirrorTest()
 				{
 					StringAssert.AreEqualIgnoringCase("06:35", ClockInMirrorTask.WhatIsTheTime("05:25"));
