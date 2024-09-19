@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void CalculateTheAreaOfARegularSidesPolygonInsideTest()
+				{
+					Assert.AreEqual(11.691, CalculateTheAreaOfARegularSidesPolygonInsideTask.AreaOfPolygonInsideCircle(3, 3));
+					Assert.AreEqual(8, CalculateTheAreaOfARegularSidesPolygonInsideTask.AreaOfPolygonInsideCircle(2, 4));
+					Assert.AreEqual(14.86, CalculateTheAreaOfARegularSidesPolygonInsideTask.AreaOfPolygonInsideCircle(2.5, 5));
+				}
+
+				[Test]
 				public void NumberFormatTest()
 				{
 					StringAssert.AreEqualIgnoringCase("100,000", NumberFormatTask.NumberFormat(100000));
