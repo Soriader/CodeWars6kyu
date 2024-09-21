@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void TheBookOfMormonTest()
+				{
+					Assert.AreEqual(0, TheBookOfMormonTask.Mormons(10, 3, 9));
+					Assert.AreEqual(1, TheBookOfMormonTask.Mormons(40, 2, 120));
+					Assert.AreEqual(2, TheBookOfMormonTask.Mormons(40, 2, 121));
+					Assert.AreEqual(12, TheBookOfMormonTask.Mormons(20000, 2, 7000000000));
+				}
+
+				[Test]
 				public void CalculateTheAreaOfARegularSidesPolygonInsideTest()
 				{
 					Assert.AreEqual(11.691, CalculateTheAreaOfARegularSidesPolygonInsideTask.AreaOfPolygonInsideCircle(3, 3));
