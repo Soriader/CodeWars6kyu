@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void PositionsAverageTest()
+				{
+					Assert.AreEqual(26.6666666667, PositionsAverageTask.PosAverage("466960, 069060, 494940, 060069, 060090, 640009, 496464, 606900, 004000, 944096"), 1e-9);
+					Assert.AreEqual(29.2592592593, PositionsAverageTask.PosAverage("444996, 699990, 666690, 096904, 600644, 640646, 606469, 409694, 666094, 606490"), 1e-9);
+					Assert.AreEqual(100, PositionsAverageTask.PosAverage("4444444, 4444444, 4444444, 4444444, 4444444, 4444444, 4444444, 4444444"), 1e-9);
+				}
+
+				[Test]
 				public void TheBookOfMormonTest()
 				{
 					Assert.AreEqual(0, TheBookOfMormonTask.Mormons(10, 3, 9));
