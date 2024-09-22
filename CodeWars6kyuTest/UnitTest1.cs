@@ -14,6 +14,26 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void MovesInSquaredStringsTest()
+				{
+					testing(MovesInSquaredStringsTask.Oper(MovesInSquaredStringsTask.Rot, "fijuoo\nCqYVct\nDrPmMJ\nerfpBA\nkWjFUG\nCVUfyL"),
+							"LyfUVC\nGUFjWk\nABpfre\nJMmPrD\ntcVYqC\nooujif");
+					testing(MovesInSquaredStringsTask.Oper(MovesInSquaredStringsTask.Rot, "rkKv\ncofM\nzXkh\nflCB"),
+							"BClf\nhkXz\nMfoc\nvKkr");
+
+					Console.WriteLine("Fixed Tests SelfieAndRot");
+					testing(MovesInSquaredStringsTask.Oper(MovesInSquaredStringsTask.SelfieAndRot, "xZBV\njsbS\nJcpN\nfVnP"),
+							"xZBV....\njsbS....\nJcpN....\nfVnP....\n....PnVf\n....NpcJ\n....Sbsj\n....VBZx");
+					testing(MovesInSquaredStringsTask.Oper(MovesInSquaredStringsTask.SelfieAndRot, "uLcq\nJkuL\nYirX\nnwMB"),
+							"uLcq....\nJkuL....\nYirX....\nnwMB....\n....BMwn\n....XriY\n....LukJ\n....qcLu");
+
+					static void testing(string actual, string expected)
+					{
+						Assert.AreEqual(expected, actual);
+					}
+				}
+
+				[Test]
 				public void PositionsAverageTest()
 				{
 					Assert.AreEqual(26.6666666667, PositionsAverageTask.PosAverage("466960, 069060, 494940, 060069, 060090, 640009, 496464, 606900, 004000, 944096"), 1e-9);
