@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void ColorChoiceTest()
+				{
+					Assert.AreEqual(2, ColorChoiceTask.Checkchoose(6, 4));
+					Assert.AreEqual(1, ColorChoiceTask.Checkchoose(4, 4));
+					Assert.AreEqual(3, ColorChoiceTask.Checkchoose(35, 7));
+					Assert.AreEqual(-1, ColorChoiceTask.Checkchoose(4, 2));
+					Assert.AreEqual(-1, ColorChoiceTask.Checkchoose(36, 7));
+				}
+				[Test]
 				public static void MovesInSquaredStringsTest()
 				{
 					testing(MovesInSquaredStringsTask.Oper(MovesInSquaredStringsTask.Rot, "fijuoo\nCqYVct\nDrPmMJ\nerfpBA\nkWjFUG\nCVUfyL"),
