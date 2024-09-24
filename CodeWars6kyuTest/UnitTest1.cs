@@ -14,6 +14,23 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void SortMyAnimalsTest()
+				{
+					var animals = new List<Animal>
+	  {
+		new Animal {Name = "Cat", NumberOfLegs = 4},
+		new Animal {Name = "Snake", NumberOfLegs = 0},
+		new Animal {Name = "Dog", NumberOfLegs = 4},
+		new Animal {Name = "Pig", NumberOfLegs = 4},
+		new Animal {Name = "Human", NumberOfLegs = 2},
+		new Animal {Name = "Bird", NumberOfLegs = 2}
+	  };
+					var output = new AnimalSorter().Sort(animals);
+					Assert.AreEqual(output[0].Name, "Snake");
+					Assert.AreEqual(output[3].Name, "Cat");
+				}
+
+				[Test]
 				public void ColorChoiceTest()
 				{
 					Assert.AreEqual(2, ColorChoiceTask.Checkchoose(6, 4));
