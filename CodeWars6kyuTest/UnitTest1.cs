@@ -14,6 +14,25 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void ErrorsHistogramTest()
+				{
+					Assert.AreEqual("u  3     ***\rw  4     ****\rx  6     ******\rz  6     ******",
+									ErrorsHistogramTask.Hist("tpwaemuqxdmwqbqrjbeosjnejqorxdozsxnrgpgqkeihqwybzyymqeazfkyiucesxwutgszbenzvgxibxrlvmzihcb"));
+
+					Assert.AreEqual("u  2     **\rw  1     *\rz  1     *",
+									ErrorsHistogramTask.Hist("aaifzlnderpeurcuqjqeywdq"));
+
+					Assert.AreEqual("u  4     ****\rw  3     ***\rx  4     ****\rz  4     ****",
+									ErrorsHistogramTask.Hist("sjeneccyhrcpfvpujfaoaykqllteovskclebmzjeqepilxygdmzvdfmxbqdzubkzturnuqxsewrwgmdfwgdx"));
+
+					Assert.AreEqual("u  1     *\rw  4     ****\rx  2     **\rz  1     *",
+									ErrorsHistogramTask.Hist("bnxyytdtqrkeaswymiwbxnuydwthweyzny"));
+
+					Assert.AreEqual("u  5     *****\rw  4     ****\rx  4     ****\rz  4     ****",
+									ErrorsHistogramTask.Hist("ttopvdaxgwfpzjmomkwssytktaizqtsekfmfhrabidwaugioqyyzrxbugsusxkfdevmijqyprcoxfyjqwsutoutjgozyhsoytg"));
+				}
+
+				[Test]
 				public void SortMyAnimalsTest()
 				{
 					var animals = new List<Animal>
