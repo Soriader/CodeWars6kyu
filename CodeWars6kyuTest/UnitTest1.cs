@@ -14,6 +14,17 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void BowlingPinsTest()
+				{
+					BowlingPinsTask bowling = new BowlingPinsTask();
+					int[] testArray = new int[] { 1, 2, 3 };
+					Assert.AreEqual("I I I I\n I I I \n       \n       ", bowling.BowlingPins(testArray));
+
+					testArray = new int[] { 3, 5, 9 };
+					Assert.AreEqual("I I   I\n I   I \n  I    \n   I   ", bowling.BowlingPins(testArray));
+				}
+
+				[Test]
 				public static void EasyBalanceCheckingTest()
 				{
 					static void dotest(string s, string exp)
