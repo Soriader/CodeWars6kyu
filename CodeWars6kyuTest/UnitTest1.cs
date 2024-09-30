@@ -14,6 +14,19 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void BrakingWellTest()
+				{
+					Assert.AreEqual(311.83146449201496, BrakingWellTask.Dist(144, 0.3), 1e-2);
+					Assert.AreEqual(92.12909477605366, BrakingWellTask.Dist(92, 0.5), 1e-2);
+					Assert.AreEqual(435.94398509960854, BrakingWellTask.Dist(142, 0.2), 1e-2);
+					Assert.AreEqual(207.8876429946766, BrakingWellTask.Dist(96, 0.2), 1e-2);
+					Assert.AreEqual(153.79671564846308, BrakingWellTask.Speed(159, 0.8), 1e-2);
+					Assert.AreEqual(147.91115701756493, BrakingWellTask.Speed(164, 0.7), 1e-2);
+					Assert.AreEqual(142.14404997566152, BrakingWellTask.Speed(153, 0.7), 1e-2);
+					Assert.AreEqual(113.64202099481099, BrakingWellTask.Speed(88, 0.9), 1e-2);
+				}
+
+				[Test]
 				public void BowlingPinsTest()
 				{
 					BowlingPinsTask bowling = new BowlingPinsTask();
