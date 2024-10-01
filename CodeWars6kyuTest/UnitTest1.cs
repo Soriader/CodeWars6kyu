@@ -14,6 +14,21 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void StringSubpatternRecognitionTest()
+				{
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("a"));
+					Assert.AreEqual(true, StringSubpatternRecognitionTask.HasSubpattern("aaaa"));
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("abcd"));
+					Assert.AreEqual(true, StringSubpatternRecognitionTask.HasSubpattern("abababab"));
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("ababababa"));
+					Assert.AreEqual(true, StringSubpatternRecognitionTask.HasSubpattern("123a123a123a"));
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("123A123a123a"));
+					Assert.AreEqual(true, StringSubpatternRecognitionTask.HasSubpattern("abbaabbaabba"));
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("abbabbabba"));
+					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("abcdabcabcd"));
+				}
+
+				[Test]
 				public void SortingByBitsTest()
                 {
 					Assert.AreEqual(new[] { 1, 8, 3, 3, 5, 6, 9, 7 }, SortingByBitsTask.SortByBit(new[] { 3, 8, 3, 6, 5, 7, 9, 1 }));
