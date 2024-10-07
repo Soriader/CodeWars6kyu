@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void StringsNumbersAndCalculationTest()
+				{
+					Assert.AreEqual("47", StringsNumbersAndCalculationTask.CalculateString(";$%§fsdfsd235??df/sdfgf5gh.000kk0000"));
+					Assert.AreEqual("54929268", StringsNumbersAndCalculationTask.CalculateString("sdfsd23454sdf*2342"));
+					Assert.AreEqual("-210908", StringsNumbersAndCalculationTask.CalculateString("fsdfsd235???34.4554s4234df-sdfgf2g3h4j442"));
+					Assert.AreEqual("234676", StringsNumbersAndCalculationTask.CalculateString("fsdfsd234.4554s4234df+sf234442"));
+				}
+
+				[Test]
 				public void StringSubpatternRecognitionTest()
 				{
 					Assert.AreEqual(false, StringSubpatternRecognitionTask.HasSubpattern("a"));
