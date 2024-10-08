@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void ReversingAProcessTest()
+				{
+					Assert.AreEqual("uogbucwnddunktsjfanzlurnyxmx", ReversingAProcessTask.Decode("1273409kuqhkoynvvknsdwljantzkpnmfgf"));
+					Assert.AreEqual("mfmwhbpoudfujjozopaugcb", ReversingAProcessTask.Decode("1544749cdcizljymhdmvvypyjamowl"));
+					Assert.AreEqual("Impossible to decode", ReversingAProcessTask.Decode("105860ymmgegeeiwaigsqkcaeguicc"));
+
+				}
+
+				[Test]
 				public static void UpAndDownTest()
 				{
 					Assert.AreEqual("who RETAINING hit THAT a THE we TAKEN", UpAndDownTask.Arrange("who hit retaining The That a we taken"));
