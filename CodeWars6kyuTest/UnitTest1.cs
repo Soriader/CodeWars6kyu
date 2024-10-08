@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void UpAndDownTest()
+				{
+					Assert.AreEqual("who RETAINING hit THAT a THE we TAKEN", UpAndDownTask.Arrange("who hit retaining The That a we taken"));
+					Assert.AreEqual("i CAME on WERE up GRANDMOTHERS so", UpAndDownTask.Arrange("on I came up were so grandmothers"));
+					Assert.AreEqual("way THE my WALL him THEM", UpAndDownTask.Arrange("way the my wall them him"));
+					Assert.AreEqual("turn GREAT-AUNTS know AUNT a LOOK to BACK", UpAndDownTask.Arrange("turn know great-aunts aunt look A to back"));
+
+				}
+
+				[Test]
 				public void StringsNumbersAndCalculationTest()
 				{
 					Assert.AreEqual("47", StringsNumbersAndCalculationTask.CalculateString(";$%§fsdfsd235??df/sdfgf5gh.000kk0000"));
