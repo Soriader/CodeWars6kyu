@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void ThePlugboardTest()
+				{
+					var pb = new ThePlugboardTask("AB");
+					Assert.AreEqual('B', pb.Process('A'), "A has to be translated to B with 'AB'");
+					Assert.AreEqual('A', pb.Process('B'), "B has to be translated to A with 'AB'");
+					Assert.AreEqual('C', pb.Process('C'), "C has to stay C with 'AB'");
+				}
+
+				[Test]
 				public static void ReversingAProcessTest()
 				{
 					Assert.AreEqual("uogbucwnddunktsjfanzlurnyxmx", ReversingAProcessTask.Decode("1273409kuqhkoynvvknsdwljantzkpnmfgf"));
