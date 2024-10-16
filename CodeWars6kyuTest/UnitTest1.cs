@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void StringTopsTest()
+				{
+					Assert.AreEqual(String.Empty, StringTopsTask.Tops(String.Empty));
+					Assert.AreEqual("2", StringTopsTask.Tops("12"));
+					Assert.AreEqual("3pgb", StringTopsTask.Tops("abcdefghijklmnopqrstuvwxyz12345"));
+					Assert.AreEqual("M3pgb", StringTopsTask.Tops("abcdefghijklmnopqrstuvwxyz1236789ABCDEFGHIJKLMN"));
+				}
+
+				[Test]
 				public void ThePlugboardTest()
 				{
 					var pb = new ThePlugboardTask("AB");
