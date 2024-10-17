@@ -14,6 +14,24 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void WorldBitsWarTest()
+				{
+					DoTest(new List<int> { 1, 5, 12 }, "odds win");
+					DoTest(new List<int> { 7, -3, 20 }, "evens win");
+					DoTest(new List<int> { 7, -3, -2, 6 }, "tie");
+					DoTest(new List<int> { -3, -5 }, "evens win");
+					DoTest(new List<int>(), "tie");
+					
+					static void DoTest(List<int> input, String expected)
+					{
+						String message = "for input: {" + String.Join(", ", input) + "}\n";
+						String actual = WorldBitsWarTask.BitsWar(input);
+						Assert.AreEqual(expected, actual, message);
+					}
+
+				}
+
+				[Test]
 				public static void ReachMeAndSumMyDigitsTest()
 				{
 					Assert.AreEqual(10, ReachMeAndSumMyDigitsTask.SumDigNthTerm(10, new long[] { 2, 1, 3 }, 6));
