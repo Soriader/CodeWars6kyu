@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void ReachMeAndSumMyDigitsTest()
+				{
+					Assert.AreEqual(10, ReachMeAndSumMyDigitsTask.SumDigNthTerm(10, new long[] { 2, 1, 3 }, 6));
+					Assert.AreEqual(10, ReachMeAndSumMyDigitsTask.SumDigNthTerm(10, new long[] { 2, 1, 3 }, 15));
+					Assert.AreEqual(9, ReachMeAndSumMyDigitsTask.SumDigNthTerm(10, new long[] { 2, 1, 3 }, 50));
+					Assert.AreEqual(7, ReachMeAndSumMyDigitsTask.SumDigNthTerm(10, new long[] { 2, 1, 3 }, 157));
+
+				}
+
+				[Test]
 				public void StringTopsTest()
 				{
 					Assert.AreEqual(String.Empty, StringTopsTask.Tops(String.Empty));
