@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void HiddenCubicNumbersTest()
+				{
+					string s = "0 9026315 -827&()"; // "0 0 Lucky"
+					String r = "0 0 Lucky";
+					Assert.AreEqual(r, HiddenCubicNumbersTask.IsSumOfCubes(s));
+				}
+
+				[Test]
 				public static void DiseaseSpreadTest()
 				{
 					static void testing(long act, long exp)
