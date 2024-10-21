@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void PointsInTheCircleTest()
+				{
+					Assert.AreEqual(5, PointsInTheCircleTask.PointsNumber(1));
+					Assert.AreEqual(13, PointsInTheCircleTask.PointsNumber(2));
+					Assert.AreEqual(29, PointsInTheCircleTask.PointsNumber(3));
+					Assert.AreEqual(81, PointsInTheCircleTask.PointsNumber(5));
+					Assert.AreEqual(3141549, PointsInTheCircleTask.PointsNumber(1000));
+				}
+
+				[Test]
 				public void HiddenCubicNumbersTest()
 				{
 					string s = "0 9026315 -827&()"; // "0 0 Lucky"
