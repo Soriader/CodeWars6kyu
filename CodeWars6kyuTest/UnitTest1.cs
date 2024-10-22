@@ -14,6 +14,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void ValidateMyPasswordTest()
+				{
+					Assert.AreEqual("VALID", ValidateMyPasswordTask.Validator("Username123"));
+					Assert.AreEqual("INVALID", ValidateMyPasswordTask.Validator("Username"));
+					Assert.AreEqual("INVALID", ValidateMyPasswordTask.Validator("123"));
+					Assert.AreEqual("INVALID", ValidateMyPasswordTask.Validator("Username123!"));
+					Assert.AreEqual("INVALID", ValidateMyPasswordTask.Validator("ThisPasswordIsTooLong1234"));
+				}
+
+				[Test]
 				public void PointsInTheCircleTest()
 				{
 					Assert.AreEqual(5, PointsInTheCircleTask.PointsNumber(1));
