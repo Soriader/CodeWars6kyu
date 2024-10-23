@@ -14,6 +14,21 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void ConvertIntegerToWhitespaceFormatTest()
+				{
+					string unbleach(string ws)
+					{
+						return ws.Replace(" ", "[space]").Replace("\t", "[tab]").Replace("\n", "[LF]");
+					}
+
+					Assert.AreEqual(unbleach(" \t\n"), unbleach(ConvertIntegerToWhitespaceFormatTask.WhitespaceNumber(1)));
+					Assert.AreEqual(unbleach(" \n"), unbleach(ConvertIntegerToWhitespaceFormatTask.WhitespaceNumber(0)));
+					Assert.AreEqual(unbleach("\t\t\n"), unbleach(ConvertIntegerToWhitespaceFormatTask.WhitespaceNumber(-1)));
+					Assert.AreEqual(unbleach(" \t \n"), unbleach(ConvertIntegerToWhitespaceFormatTask.WhitespaceNumber(2)));
+					Assert.AreEqual(unbleach("\t\t\t\n"), unbleach(ConvertIntegerToWhitespaceFormatTask.WhitespaceNumber(-3)));
+				}
+
+				[Test]
 				public void ValidateMyPasswordTest()
 				{
 					Assert.AreEqual("VALID", ValidateMyPasswordTask.Validator("Username123"));
