@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void CountTheDaysTest()
+				{
+					CountTheDaysTask d = new CountTheDaysTask();
+					Assert.AreEqual("The day is in the past!", d.CountDays(new DateTime(2016, 12, 2)));
+					Assert.AreEqual("Today is the day!", d.CountDays(DateTime.Now));
+				}
+
+				[Test]
 				public void CasinoChipsTest()
 				{
 					Assert.AreEqual(1, CasinoChipsTask.Solve(new int[] { 1, 1, 1 }));
