@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void KillerGarageDoorTest()
+				{
+					var actual = KillerGarageDoorTask.ProcessEvents("..P...O.....");
+					Assert.AreEqual("001234321000", actual);
+				}
+
+				[Test]
 				public void CountTheDaysTest()
 				{
 					CountTheDaysTask d = new CountTheDaysTask();
