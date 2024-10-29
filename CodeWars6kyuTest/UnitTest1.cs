@@ -14,6 +14,19 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void TwinPrimeTest()
+				{
+					Assert.AreEqual(true, TwinPrimeTask.IsTwinPrime(5));
+					Assert.AreEqual(false, TwinPrimeTask.IsTwinPrime(25));
+					Assert.AreEqual(true, TwinPrimeTask.IsTwinPrime(11));
+					Assert.AreEqual(false, TwinPrimeTask.IsTwinPrime(8));
+					Assert.AreEqual(false, TwinPrimeTask.IsTwinPrime(1));
+					Assert.AreEqual(true, TwinPrimeTask.IsTwinPrime(29));
+					Assert.AreEqual(false, TwinPrimeTask.IsTwinPrime(14));
+					Assert.AreEqual(true, TwinPrimeTask.IsTwinPrime(41));
+				}
+
+				[Test]
 				public void KillerGarageDoorTest()
 				{
 					var actual = KillerGarageDoorTask.ProcessEvents("..P...O.....");
