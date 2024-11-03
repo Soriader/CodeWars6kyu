@@ -14,6 +14,28 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void AlternatingSplitTest()
+				{
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Encrypt("This is a test!", 0));
+					Assert.AreEqual("hsi  etTi sats!", AlternatingSplitTask.Encrypt("This is a test!", 1));
+					Assert.AreEqual("s eT ashi tist!", AlternatingSplitTask.Encrypt("This is a test!", 2));
+					Assert.AreEqual(" Tah itse sits!", AlternatingSplitTask.Encrypt("This is a test!", 3));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Encrypt("This is a test!", 4));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Encrypt("This is a test!", -1));
+					Assert.AreEqual("hskt svr neetn!Ti aai eyitrsig", AlternatingSplitTask.Encrypt("This kata is very interesting!", 1));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt("This is a test!", 0));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt("hsi  etTi sats!", 1));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt("s eT ashi tist!", 2));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt(" Tah itse sits!", 3));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt("This is a test!", 4));
+					Assert.AreEqual("This is a test!", AlternatingSplitTask.Decrypt("This is a test!", -1));
+					Assert.AreEqual("This kata is very interesting!", AlternatingSplitTask.Decrypt("hskt svr neetn!Ti aai eyitrsig", 1));
+					Assert.AreEqual("", AlternatingSplitTask.Encrypt("", 0));
+					Assert.AreEqual("", AlternatingSplitTask.Decrypt("", 0));
+					Assert.AreEqual(null, AlternatingSplitTask.Encrypt(null, 0));
+					Assert.AreEqual(null, AlternatingSplitTask.Decrypt(null, 0));
+				}
+				[Test]
 				public void TwinPrimeTest()
 				{
 					Assert.AreEqual(true, TwinPrimeTask.IsTwinPrime(5));
