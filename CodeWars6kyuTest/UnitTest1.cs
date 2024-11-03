@@ -14,6 +14,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void PlentyOfFishIThePondTest()
+				{
+					PlentyOfFishIThePondTask game = new PlentyOfFishIThePondTask();
+					string shoal = "151128241212192113722321331";
+					Assert.AreEqual(5, game.Fish(shoal));
+				}
+
+				[Test]
 				public void AlternatingSplitTest()
 				{
 					Assert.AreEqual("This is a test!", AlternatingSplitTask.Encrypt("This is a test!", 0));
