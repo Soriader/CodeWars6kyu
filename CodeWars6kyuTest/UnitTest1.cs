@@ -14,6 +14,21 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void ARuleOfDivisibilityByTest()
+				{
+					static void testing(long actual, long expected)
+					{
+						Assert.AreEqual(expected, actual);
+					}
+
+					testing(ARuleOfDivisibilityByTask.Thirt(8529), 79);
+					testing(ARuleOfDivisibilityByTask.Thirt(85299258), 31);
+					testing(ARuleOfDivisibilityByTask.Thirt(5634), 57);
+					testing(ARuleOfDivisibilityByTask.Thirt(1111111111), 71);
+					testing(ARuleOfDivisibilityByTask.Thirt(987654321), 30);
+				}
+
+				[Test]
 				public void PlentyOfFishIThePondTest()
 				{
 					PlentyOfFishIThePondTask game = new PlentyOfFishIThePondTask();
