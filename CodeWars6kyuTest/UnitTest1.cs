@@ -2,6 +2,7 @@ using CodeWars6kyu;
 using System.Text;
 using System.Collections;
 using NUnit.Framework.Internal;
+using System.Numerics;
 
 
 namespace CodeWars6kyuTest
@@ -13,6 +14,15 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+				[Test]
+				public void _0_TankState()
+				{
+					IUnit tank = new Tank();
+
+					Assert.AreEqual(true, tank.CanMove);
+					Assert.AreEqual(5, tank.Damage);
+				}
+
 				[Test]
 				public static void ARuleOfDivisibilityByTest()
 				{
