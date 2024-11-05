@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void LastSurvivorsEpTwoTest()
+				{
+					Assert.AreEqual("ac", LastSurvivorsEpTwoTask.LastSurvivors("abaa"));
+					Assert.AreEqual("", LastSurvivorsEpTwoTask.LastSurvivors(""));
+					Assert.AreEqual("c", LastSurvivorsEpTwoTask.LastSurvivors("zzab"));
+				}
+
+				[Test]
 				public void HighestScoringWordTest()
 				{
 					Assert.AreEqual("taxi", HighestScoringWordTask.High("man i need a taxi up to ubud"));
