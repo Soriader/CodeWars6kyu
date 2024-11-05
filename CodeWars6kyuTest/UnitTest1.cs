@@ -15,6 +15,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void HighestScoringWordTest()
+				{
+					Assert.AreEqual("taxi", HighestScoringWordTask.High("man i need a taxi up to ubud"));
+					Assert.AreEqual("volcano", HighestScoringWordTask.High("what time are we climbing up to the volcano"));
+					Assert.AreEqual("semynak", HighestScoringWordTask.High("take me to semynak"));
+					Assert.AreEqual("d", HighestScoringWordTask.High("d bb"));
+					Assert.AreEqual("aaa", HighestScoringWordTask.High("aaa b"));
+				}
+
+				[Test]
 				public void _0_TankState()
 				{
 					IUnit tank = new Tank();
