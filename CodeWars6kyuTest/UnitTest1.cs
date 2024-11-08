@@ -15,6 +15,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void GrilleIt()
+				{
+					Assert.AreEqual("df", GrillItTask.Grille("abcdef", 5));
+					Assert.AreEqual("", GrillItTask.Grille("", 5));
+					Assert.AreEqual("d", GrillItTask.Grille("abcd", 1));
+					Assert.AreEqual("b", GrillItTask.Grille("0abd", 2));
+					Assert.AreEqual("codewars", GrillItTask.Grille("tcddoadepwweasresd", 77098));
+				}
+
+				[Test]
 				public void LastSurvivorsEpTwoTest()
 				{
 					Assert.AreEqual("ac", LastSurvivorsEpTwoTask.LastSurvivors("abaa"));
