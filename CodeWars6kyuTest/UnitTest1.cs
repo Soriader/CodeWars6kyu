@@ -15,6 +15,16 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void NumberPyramidTest()
+				{
+					Assert.AreEqual("", NumberPyramidTask.Pattern(0));
+					Assert.AreEqual("", NumberPyramidTask.Pattern(-25));
+					Assert.AreEqual("1", NumberPyramidTask.Pattern(1));
+					Assert.AreEqual("   1   \n  121  \n 12321 \n1234321", NumberPyramidTask.Pattern(4));
+					Assert.AreEqual("      1      \n     121     \n    12321    \n   1234321   \n  123454321  \n 12345654321 \n1234567654321", NumberPyramidTask.Pattern(7));
+				}
+
+				[Test]
 				public void GrilleIt()
 				{
 					Assert.AreEqual("df", GrillItTask.Grille("abcdef", 5));
