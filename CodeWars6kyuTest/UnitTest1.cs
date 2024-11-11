@@ -14,6 +14,38 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+
+				[Test]
+				public void SpellingBeeTest()
+				{
+					static char[][] Show(char[][] hive)
+					{
+						for (int y = 0; y < hive.Length; y++)
+						{
+							Console.WriteLine(hive[y]);
+						}
+						return hive;
+					}
+
+					char[][] hive = new char[][] {
+		"bee.bee".ToCharArray(),
+		".e..e..".ToCharArray(),
+		".b..eeb".ToCharArray()
+	  };
+
+					Assert.AreEqual(5, SpellingBeeTask.HowManyBees(Show(hive)));
+
+					Console.WriteLine("<hr>");
+
+					hive = new char[][] {
+		"bee.bee".ToCharArray(),
+		"e.e.e.e".ToCharArray(),
+		"eeb.eeb".ToCharArray()
+	  };
+
+					Assert.AreEqual(8, SpellingBeeTask.HowManyBees(Show(hive)));
+				}
+
 				[Test]
 				public void NumberPyramidTest()
 				{
