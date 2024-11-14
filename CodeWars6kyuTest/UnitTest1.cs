@@ -14,6 +14,15 @@ namespace CodeWars6kyuTest
         {
             public class Tests
             {
+				[Test]
+				public void SimpleReversedParenthesisTest()
+				{
+					Assert.AreEqual(2, SimpleReversedParenthesisTask.Solve(")()("));
+					Assert.AreEqual(1, SimpleReversedParenthesisTask.Solve("((()"));
+					Assert.AreEqual(-1, SimpleReversedParenthesisTask.Solve("((("));
+					Assert.AreEqual(3, SimpleReversedParenthesisTask.Solve("())((("));
+					Assert.AreEqual(4, SimpleReversedParenthesisTask.Solve("())()))))()()("));
+				}
 
 				[Test]
 				public void SpellingBeeTest()
