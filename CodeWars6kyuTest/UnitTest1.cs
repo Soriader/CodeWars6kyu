@@ -15,6 +15,15 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void FilePathOperationsTest()
+				{
+					FilePathOperationsTask FM = new FilePathOperationsTask("/Users/person1/Pictures/house.png");
+					Assert.AreEqual("png", FM.extension());
+					Assert.AreEqual("house", FM.filename());
+					Assert.AreEqual("/Users/person1/Pictures/", FM.dirpath());
+				}
+
+				[Test]
 				public void SimpleReversedParenthesisTest()
 				{
 					Assert.AreEqual(2, SimpleReversedParenthesisTask.Solve(")()("));
