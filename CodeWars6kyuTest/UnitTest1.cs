@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void SurroundingPrimesForAValueTest()
+				{
+					Assert.AreEqual(new int[] { 89, 101 }, SurroundingPrimesForAValueTask.PrimeBefAft(97));
+					Assert.AreEqual(new int[] { 97, 101 }, SurroundingPrimesForAValueTask.PrimeBefAft(100));
+					Assert.AreEqual(new int[] { 97, 103 }, SurroundingPrimesForAValueTask.PrimeBefAft(101));
+				}
+
+				[Test]
 				public void FilePathOperationsTest()
 				{
 					FilePathOperationsTask FM = new FilePathOperationsTask("/Users/person1/Pictures/house.png");
