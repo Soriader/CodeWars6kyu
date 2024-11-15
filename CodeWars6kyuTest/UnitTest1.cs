@@ -15,6 +15,13 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void ReversingAndCombiningTextTest()
+				{
+					//Assert.AreEqual("defabc123ghi", ReversingAndCombiningTextTask.ReverseAndCombineText("cba fed ihg 123"));
+					Assert.AreEqual("gffds432243fdsfdseewttf", ReversingAndCombiningTextTask.ReverseAndCombineText("sdfsdf wee sdffg 342234 ftt"));
+				}
+
+				[Test]
 				public static void SurroundingPrimesForAValueTest()
 				{
 					Assert.AreEqual(new int[] { 89, 101 }, SurroundingPrimesForAValueTask.PrimeBefAft(97));
