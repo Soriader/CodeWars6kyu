@@ -15,6 +15,19 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void PatternCraftStrategyTest()
+				{
+					iUnit viking = new Viking();
+
+					viking.Move();
+					Assert.AreEqual(1, viking.Position);
+
+					viking.MoveBehavior = new Fly();
+					viking.Move();
+					Assert.AreEqual(11, viking.Position);
+				}
+
+				[Test]
 				public static void ReversingAndCombiningTextTest()
 				{
 					//Assert.AreEqual("defabc123ghi", ReversingAndCombiningTextTask.ReverseAndCombineText("cba fed ihg 123"));
