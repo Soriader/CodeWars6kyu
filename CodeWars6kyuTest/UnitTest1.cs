@@ -15,6 +15,23 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void HowMuchHexIsTest()
+				{
+					Assert.AreEqual(1, HowMuchHexIsTask.FisHex("pufferfish"));
+					Assert.AreEqual(14, HowMuchHexIsTask.FisHex("puffers"));
+					Assert.AreEqual(14, HowMuchHexIsTask.FisHex("balloonfish"));
+					Assert.AreEqual(4, HowMuchHexIsTask.FisHex("blowfish"));
+					Assert.AreEqual(10, HowMuchHexIsTask.FisHex("bubblefish"));
+					Assert.AreEqual(10, HowMuchHexIsTask.FisHex("globefish"));
+					Assert.AreEqual(1, HowMuchHexIsTask.FisHex("swellfish"));
+					Assert.AreEqual(8, HowMuchHexIsTask.FisHex("toadfish"));
+					Assert.AreEqual(9, HowMuchHexIsTask.FisHex("toadies"));
+					Assert.AreEqual(9, HowMuchHexIsTask.FisHex("honey toads"));
+					Assert.AreEqual(13, HowMuchHexIsTask.FisHex("sugar toads"));
+					Assert.AreEqual(5, HowMuchHexIsTask.FisHex("sea squab"));
+				}
+
+				[Test]
 				public void PatternCraftStrategyTest()
 				{
 					iUnit viking = new Viking();
