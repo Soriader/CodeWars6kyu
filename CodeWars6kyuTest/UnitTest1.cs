@@ -15,6 +15,22 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public static void NCycleTest()
+				{
+					static void dotest(int n, int expected)
+					{
+						Console.WriteLine("n: {0}, expected: {1}", n, expected);
+						Assert.AreEqual(expected, NCycleTask.Running(n));
+					}
+
+					dotest(33, 2);
+					dotest(18118, -1);
+					dotest(69, 22);
+					dotest(197, 98);
+					dotest(65, -1);
+				}
+
+				[Test]
 				public void HowMuchHexIsTest()
 				{
 					Assert.AreEqual(1, HowMuchHexIsTask.FisHex("pufferfish"));
