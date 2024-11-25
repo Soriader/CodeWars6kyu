@@ -15,6 +15,21 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void TicTacToeLikeTableGeneratorTest()
+				{
+					void DoTest(char[] board, int width, string expected)
+					{
+						Assert.AreEqual(expected, TicTacToeLikeTableGeneratorTask.DisplayBoard(board, width));
+					}
+
+					DoTest(new char[] { 'O', 'X', 'X', 'O' }, 2, " O | X \n-------\n X | O ");
+					DoTest(new char[] { 'O', 'X', ' ', ' ', 'X', ' ', 'X', 'O', ' ' }, 3, " O | X |   \n-----------\n   | X |   \n-----------\n X | O |   ");
+					DoTest(new char[] { 'O', 'X', ' ', ' ', 'X', ' ', 'X', 'O', ' ', 'O' }, 5, " O | X |   |   | X \n-------------------\n   | X | O |   | O ");
+					DoTest(new char[] { 'O', 'X', ' ', ' ', 'X', ' ', 'X', 'O', ' ', 'O' }, 2, " O | X \n-------\n   |   \n-------\n X |   \n-------\n X | O \n-------\n   | O ");
+					DoTest(new char[] { '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1', '2', '3', '4', '5', '1' }, 6, " 1 | 2 | 3 | 4 | 5 | 1 \n-----------------------\n 2 | 3 | 4 | 5 | 1 | 2 \n-----------------------\n 3 | 4 | 5 | 1 | 2 | 3 \n-----------------------\n 4 | 5 | 1 | 2 | 3 | 4 \n-----------------------\n 5 | 1 | 2 | 3 | 4 | 5 \n-----------------------\n 1 | 2 | 3 | 4 | 5 | 1 ");
+				}
+
+				[Test]
 				public static void NCycleTest()
 				{
 					static void dotest(int n, int expected)
