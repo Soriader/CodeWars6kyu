@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void MissingKeyTest()
+				{
+					Assert.AreEqual(1939, MissingKeyTask.FindTheKey("scout", new int[] { 20, 12, 18, 30, 21 }));
+					Assert.AreEqual(1939, MissingKeyTask.FindTheKey("masterpiece", new int[] { 14, 10, 22, 29, 6, 27, 19, 18, 6, 12, 8 }));
+					Assert.AreEqual(12, MissingKeyTask.FindTheKey("nomoretears", new int[] { 15, 17, 14, 17, 19, 7, 21, 7, 2, 20, 20 }));
+				}
+
+				[Test]
 				public void TicTacToeLikeTableGeneratorTest()
 				{
 					void DoTest(char[] board, int width, string expected)
