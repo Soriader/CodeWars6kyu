@@ -15,6 +15,18 @@ namespace CodeWars6kyuTest
             public class Tests
             {
 				[Test]
+				public void AssembleStringTest()
+				{
+					Assert.AreEqual("abcde", AssembleStringTask.Assemble(new string[] { "a*cde", "*bcde", "abc*e" }));
+					Assert.AreEqual("a#cd#", AssembleStringTask.Assemble(new string[] { "a*c**", "**cd*", "a*cd*" }));
+					Assert.AreEqual("hashtag -> #", AssembleStringTask.Assemble(new string[] { "*ashtag ** *", "h*sht*g *> *", "has*tag -* *" }));
+					Assert.AreEqual("abcde", AssembleStringTask.Assemble(new string[] { "abcde", "abcde", "abcbe" }));
+					Assert.AreEqual("#####", AssembleStringTask.Assemble(new string[] { "*****", "*****", "*****" }));
+					Assert.AreEqual("", AssembleStringTask.Assemble(new string[0]));
+					Assert.AreEqual("", AssembleStringTask.Assemble(new string[] { "", "", "" }));
+				}
+
+				[Test]
 				public void EsolangTickTest()
 				{
 					Assert.AreEqual("Hello world!", EsolangTickTask.Interpret("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++**>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*>++++++++++++++++++++++++++++++++*>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*<<*>>>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*<<<<*>>>>>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*>+++++++++++++++++++++++++++++++++*"));
