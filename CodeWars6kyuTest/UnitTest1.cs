@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
 				[Test]
+				public void EasyDiagonalTest()
+				{
+					Assert.AreEqual(new BigInteger(20349), EasyDiagonalTask.Diagonal(20, 4));
+					Assert.AreEqual(new BigInteger(5985), EasyDiagonalTask.Diagonal(20, 3));
+					Assert.AreEqual(new BigInteger(54264), EasyDiagonalTask.Diagonal(20, 5));
+				}
+
+				[Test]
 				public void AssembleStringTest()
 				{
 					Assert.AreEqual("abcde", AssembleStringTask.Assemble(new string[] { "a*cde", "*bcde", "abc*e" }));
