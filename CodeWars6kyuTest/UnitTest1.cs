@@ -15,6 +15,15 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
 				[Test]
+				public void SimpleDivisionTest()
+				{
+					Assert.AreEqual(true, SimpleDivisionTask.Solve(2, 256));
+					Assert.AreEqual(true, SimpleDivisionTask.Solve(21, 2893401));
+					Assert.AreEqual(false, SimpleDivisionTask.Solve(2, 253));
+					Assert.AreEqual(false, SimpleDivisionTask.Solve(21, 2893406));
+				}
+
+				[Test]
 				public void MiniBitMoveTest()
 				{
 					Assert.AreEqual(new bool[] { false, false, true, true, false, true, false }, MiniBitMoveTask.Interpreter("10", new bool[] { true, true, false, false, true, false, true }));
