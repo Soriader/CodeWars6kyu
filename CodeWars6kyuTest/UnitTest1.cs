@@ -15,6 +15,16 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
 				[Test]
+				public void PossibilitiesOfThrowingACoinTest()
+				{
+					PossibilitiesOfThrowingACoinTask c = new PossibilitiesOfThrowingACoinTask();
+
+					Assert.AreEqual(new List<string>() { "H", "T" }, c.Coin(1));
+					Assert.AreEqual(new List<string>() { "HH", "HT", "TH", "TT" }, c.Coin(2));
+					Assert.AreEqual(new List<string>() { "HHH", "HHT", "HTH", "HTT", "THH", "THT", "TTH", "TTT" }, c.Coin(3));
+				}
+
+				[Test]
 				public void WordsToHexTest()
 				{
 					Assert.AreEqual(new string[] { "#48656c", "#6d7900", "#6e616d", "#697300", "#476172", "#616e64", "#490000", "#6c696b", "#636865" }, WordsToHexTask.WordsToHex("Hello, my name is Gary and I like cheese."));
