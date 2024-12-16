@@ -15,6 +15,19 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
 				[Test]
+				public void KaKaKaCypherTest()
+				{
+					Assert.AreEqual("kaka", KaKaKaCypherTask.KaCokadekaMe("ka"));
+					Assert.AreEqual("kaa", KaKaKaCypherTask.KaCokadekaMe("a"));
+					Assert.AreEqual("kaaa", KaKaKaCypherTask.KaCokadekaMe("aa"));
+					Assert.AreEqual("kaz", KaKaKaCypherTask.KaCokadekaMe("z"));
+					Assert.AreEqual("kaAkabbaa", KaKaKaCypherTask.KaCokadekaMe("Abbaa"));
+					Assert.AreEqual("kamaikantekanakance", KaKaKaCypherTask.KaCokadekaMe("maintenance"));
+					Assert.AreEqual("kaWookadie", KaKaKaCypherTask.KaCokadekaMe("Woodie"));
+					Assert.AreEqual("kaIkancokamprekahekansikabikalikatiekas", KaKaKaCypherTask.KaCokadekaMe("Incomprehensibilities"));
+				}
+
+				[Test]
 				public void FractionsClassTest()
 				{
 					Assert.AreEqual(new Fraction(37, 40), new Fraction(1, 8) + new Fraction(4, 5));
