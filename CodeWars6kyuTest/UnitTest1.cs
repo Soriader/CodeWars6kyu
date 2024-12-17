@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
 				[Test]
+				public void MakeAWindowTest()
+				{
+					Assert.AreEqual("-----\n|.|.|\n|-+-|\n|.|.|\n-----", MakeAWindowTask.MakeAWindow(1));
+					Assert.AreEqual("---------\n|...|...|\n|...|...|\n|...|...|\n|---+---|\n|...|...|\n|...|...|\n|...|...|\n---------", MakeAWindowTask.MakeAWindow(3));
+
+				}
+
+				[Test]
 				public void KaKaKaCypherTest()
 				{
 					Assert.AreEqual("kaka", KaKaKaCypherTask.KaCokadekaMe("ka"));
