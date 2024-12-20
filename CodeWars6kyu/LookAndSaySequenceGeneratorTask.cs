@@ -15,19 +15,19 @@ namespace CodeWars6kyu
                 return firstElement;
             }
 
-            var sequence = firstElement;
+            var result = firstElement;
 
             for (int iterator = 1; iterator < n; iterator++)
             {
                 string boxOfSequence = "";
                 int i = 0;
 
-                while (i < sequence.Length)
+                while (i < result.Length)
                 {
-                    char currentChar = sequence[i];
+                    char currentChar = result[i];
                     int countElement = 0;
 
-                    while (i < sequence.Length && sequence[i] == currentChar)
+                    while (i < result.Length && result[i] == currentChar)
                     {
                         countElement++;
                         i++;
@@ -36,10 +36,10 @@ namespace CodeWars6kyu
                     boxOfSequence += $"{countElement}{currentChar}";
                 }
 
-                sequence = boxOfSequence;
+                result = boxOfSequence;
             }
 
-            return sequence;
+            return result;
         }
     }
 }
