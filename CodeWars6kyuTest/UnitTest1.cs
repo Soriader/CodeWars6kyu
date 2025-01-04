@@ -15,6 +15,14 @@ namespace CodeWars6kyuTest
 			public class Tests
 			{
                 [Test]
+                public void TimeLikeStringFormatTest()
+                {
+                    Assert.That(() => TimeLikeStringFormatTask.FormatTime(80), Throws.ArgumentException);
+                    Assert.That(TimeLikeStringFormatTask.FormatTime(1000), Is.EqualTo("10:00"));
+
+                }
+
+                [Test]
                 public void DiamondTest()
                 {
                     Assert.AreEqual("      1      \n     121     \n    12321    \n   1234321   \n  123454321  \n 12345654321 \n1234567654321\n 12345654321 \n  123454321  \n   1234321   \n    12321    \n     121     \n      1      ", DiamondTask.Pattern(7));
