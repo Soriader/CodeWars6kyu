@@ -14,13 +14,27 @@ namespace CodeWars6kyuTest
 		{
 			public class Tests
 			{
+                [Test]
+                public void ParsingTimeTest()
+                {
+					Assert.AreEqual(0, ParsingTimeTask.ToSeconds("00:00:00"));
+					Assert.AreEqual(3723, ParsingTimeTask.ToSeconds("01:02:03"));
+					Assert.AreEqual(null, ParsingTimeTask.ToSeconds("01:02:60"));
+					Assert.AreEqual(null, ParsingTimeTask.ToSeconds("01:60:03"));
+					Assert.AreEqual(359999, ParsingTimeTask.ToSeconds("99:59:59"));
+					Assert.AreEqual(null, ParsingTimeTask.ToSeconds("0:00:00"));
+                    Assert.AreEqual(null, ParsingTimeTask.ToSeconds("00:0:00"));
+                    Assert.AreEqual(null, ParsingTimeTask.ToSeconds("00:00:0"));
+                    Assert.AreEqual(null, ParsingTimeTask.ToSeconds("00:00:00\n0"));
+                    Assert.AreEqual(null, ParsingTimeTask.ToSeconds("00\n00:00:00"));
+                }
 
                 [Test]
                 public void SnakesAndLaddersTest()
                 {
                     var dice = new[] { 2, 1, 5, 1, 5, 4 };
                     var board = new[] { 0, 0, 3, 0, 0, 0, 0, -2, 0, 0, 0 };
-                    //Assert.That(SnakesAndLaddersTask.SnakesAndLadders(board, dice), Is.EqualTo(10));
+                    Assert.That(SnakesAndLaddersTask.SnakesAndLadders(board, dice), Is.EqualTo(10));
 
                     dice = new[] { 1, 4, 2, 7, 1, 3, 5, 7, 1 };
                     board = new[] { 0, 0, 0, 0, 0, 0, 0, -1, 9, 0, 0, 0, 0, 0, -13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
