@@ -14,13 +14,20 @@ namespace CodeWars6kyu
             var timePart = time.Split(':');
 
 
-            if (timePart.Length != 3 || timePart[0].Length != 2 || timePart[1].Length != 2 || timePart[2].Length != 2 || int.Parse(timePart[2]) > 59 || int.Parse(timePart[1]) > 59)
+            if (timePart.Length != 3 
+                || timePart[0].Length != 2 
+                || timePart[1].Length != 2 
+                || timePart[2].Length != 2 
+                || int.Parse(timePart[2]) > 59 
+                || int.Parse(timePart[1]) > 59)
             {
                 return null;
             }
 
 
-            result = int.Parse(timePart[0]) * 3600 + int.Parse(timePart[1]) * 60 + int.Parse(timePart[2]);
+            result = int.Parse(timePart[0]) * 3600 
+                + int.Parse(timePart[1]) * 60 
+                + int.Parse(timePart[2]);
 
             return result;
         }
