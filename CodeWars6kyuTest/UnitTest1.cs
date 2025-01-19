@@ -14,44 +14,20 @@ namespace CodeWars6kyuTest
 		{
 			public class Tests
             {
-                //[Test]
-                //public void StringPyramidTestForFirstPart()
-                //{
-                //                string expectedWatchFromSide ="  c  \n" +" bbb \n" +"aaaaa";
-                //                Assert.AreEqual(expectedWatchFromSide, StringPyramidTask.WatchPyramidFromTheSide("abc"));
-
-                //                expectedWatchFromSide = "      7      \n"
-                //    + "     666     \n"
-                //    + "    55555    \n"
-                //    + "   4444444   \n"
-                //    + "  333333333  \n"
-                //    + " 22222222222 \n"
-                //    + "1111111111111";
-
-                //                Assert.AreEqual(expectedWatchFromSide, StringPyramidTask.WatchPyramidFromTheSide("1234567"));
-                //            }
-
                 [Test]
-                public void StringPyramidTestForSecondPart()
-				{
-                    string expectedWatchFromAbove =
-                    "aaaaa\n" +
-                    "abbba\n" +
-                    "abcba\n" +
-                    "abbba\n" +
-                    "aaaaa";
-                    Assert.AreEqual(expectedWatchFromAbove, StringPyramidTask.WatchPyramidFromAbove("abc"));
-
-                    expectedWatchFromAbove =
-    "7777777\n" +
-    "7666667\n" +
-    "7655567\n" +
-    "7654567\n" +
-    "7655567\n" +
-    "7666667\n" +
-    "7777777";
-
-                    Assert.AreEqual(expectedWatchFromAbove, StringPyramidTask.WatchPyramidFromAbove("1234567"));
+                public static void FindNumbersWithSameAmountOfDivisorsTest()
+                {
+                    Assert.AreEqual(8, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(1, 50));
+                    Assert.AreEqual(7, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(3, 100));
+                    Assert.AreEqual(18, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(3, 200));
+                    Assert.AreEqual(86, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(6, 350));
+                    Assert.AreEqual(214, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(6, 1000));
+                    Assert.AreEqual(189, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(7, 1500));
+                    Assert.AreEqual(309, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(7, 2500));
+                    Assert.AreEqual(366, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(7, 3000));
+                    Assert.AreEqual(487, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(9, 4000));
+                    Assert.AreEqual(622, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(9, 5000));
+                    Assert.AreEqual(567, FindNumbersWithSameAmountOfDivisorsTask.CountPairsInt(11, 5000));
 
                 }
 
