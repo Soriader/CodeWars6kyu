@@ -14,6 +14,13 @@ namespace CodeWars6kyuTest
 		{
 			public class Tests
             {
+	            [Test]
+	            public void AFunctionalDeckOfCardsTest()
+	            {
+		            string[] deck = AFunctionalDeckOfCardsTask.BuildDeck();
+		            Assert.That(deck.Length, Is.EqualTo(52), "Your deck should have 52 cards");
+	            }
+	            
 				[Test]
 				public void DictionaryMergeTest()
 				{
@@ -29,7 +36,7 @@ namespace CodeWars6kyuTest
 		{ "D", new[] { 5 } }
 	};
 
-					// Porównanie zawartoœci
+					// Porï¿½wnanie zawartoï¿½ci
 					Assert.AreEqual(expected.Keys, merged.Keys);
 					foreach (var key in expected.Keys)
 					{
@@ -822,7 +829,7 @@ namespace CodeWars6kyuTest
 				[Test]
 				public void StringsNumbersAndCalculationTest()
 				{
-					Assert.AreEqual("47", StringsNumbersAndCalculationTask.CalculateString(";$%§fsdfsd235??df/sdfgf5gh.000kk0000"));
+					Assert.AreEqual("47", StringsNumbersAndCalculationTask.CalculateString(";$%ï¿½fsdfsd235??df/sdfgf5gh.000kk0000"));
 					Assert.AreEqual("54929268", StringsNumbersAndCalculationTask.CalculateString("sdfsd23454sdf*2342"));
 					Assert.AreEqual("-210908", StringsNumbersAndCalculationTask.CalculateString("fsdfsd235???34.4554s4234df-sdfgf2g3h4j442"));
 					Assert.AreEqual("234676", StringsNumbersAndCalculationTask.CalculateString("fsdfsd234.4554s4234df+sf234442"));
