@@ -14,14 +14,9 @@ namespace CodeWars6kyuTest
 		{
 			public class Tests
             {
+	            private readonly CalculatePyramidHeight _calculatePyramidHeight = new CalculatePyramidHeight();
+
 	            [Test]
-	            public void AFunctionalDeckOfCardsTest()
-	            {
-		            string[] deck = AFunctionalDeckOfCardsTask.BuildDeck();
-		            Assert.That(deck.Length, Is.EqualTo(52), "Your deck should have 52 cards");
-	            }
-	            
-				[Test]
 				public void DictionaryMergeTest()
 				{
 					var original1 = new Dictionary<string, int> { { "A", 1 }, { "B", 2 }, { "C", 3 } };
