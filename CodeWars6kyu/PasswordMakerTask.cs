@@ -13,7 +13,6 @@ public class PasswordMakerTask
         if (charPool.Count < len)
         {
             throw new ArgumentException("Error! The length of the password is too short!");
-
         }
 
         var password = new char[len];
