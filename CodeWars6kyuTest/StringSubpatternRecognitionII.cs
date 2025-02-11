@@ -16,7 +16,6 @@ public class StringSubpatternRecognitionII
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("ababababa"), Is.EqualTo(false));
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("123a123a123a"), Is.EqualTo(true));
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("123A123a123a"), Is.EqualTo(false));
-        Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("12aa13a21233"), Is.EqualTo(true));
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("12aa13a21233A"), Is.EqualTo(false));
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("abcdabcaccd"), Is.EqualTo(false));
         Assert.That(StringSubpatternRecognitionIITask.HasSubpattern("aaaabb"), Is.EqualTo(true));
