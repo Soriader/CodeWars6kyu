@@ -1,2 +1,2 @@
 global using NUnit.Framework;
-namespace CodeWars6kyu;
+global using CodeWars6kyu;
